@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
+import config from '../config';
 
 interface AutoSaveOptions {
   key: string; // Unique key for identification
@@ -26,7 +27,7 @@ export const useAutoSave = <T extends Record<string, any>>(
     debounceMs = 1000,
     onSave,
     onRestore,
-    endpoint = 'http://localhost:5007/api',
+    endpoint = config.api.baseUrl,
     enabled = true
   } = options;
 

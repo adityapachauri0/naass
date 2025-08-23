@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 import { useAutoSave } from '../hooks/useAutoSave';
 import AutoSaveIndicator from './AutoSaveIndicator';
+import config from '../config';
 
 interface ContactWithAutoSaveProps {
   consentSettings?: {
@@ -52,7 +53,7 @@ const ContactWithAutoSave: React.FC<ContactWithAutoSaveProps> = ({ consentSettin
   } = useAutoSave(formData, {
     key: sessionKey,
     debounceMs: 1500,
-    endpoint: 'http://localhost:5007/api',
+    endpoint: config.api.baseUrl,
     enabled: consentSettings?.autoSave !== false, // Enable by default or based on consent
     onRestore: (data) => {
       setFormData(data);
@@ -86,7 +87,7 @@ const ContactWithAutoSave: React.FC<ContactWithAutoSaveProps> = ({ consentSettin
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post('http://localhost:5007/api/contact', formData);
+      const response = await axios.post(`${config.api.baseUrl}/contact`, formData);
       
       if (response.data.success) {
         toast.success('Thank you! We\'ll get back to you soon.');

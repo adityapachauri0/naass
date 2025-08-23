@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import config from '../../config';
 
 interface Lead {
   _id: string;
@@ -77,7 +78,7 @@ const Dashboard: React.FC = () => {
   const fetchLeads = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5007/api/leads');
+      const response = await axios.get(`${config.api.baseUrl}/leads`);
       const leadsData = response.data.data || response.data;
       setLeads(Array.isArray(leadsData) ? leadsData : []);
       calculateStats(Array.isArray(leadsData) ? leadsData : []);
@@ -155,7 +156,7 @@ const Dashboard: React.FC = () => {
 
   const updateLeadStatus = async (leadId: string, newStatus: Lead['status']) => {
     try {
-      await axios.put(`http://localhost:5007/api/leads/${leadId}`, { status: newStatus });
+      await axios.put(`${config.api.baseUrl}/leads/${leadId}`, { status: newStatus });
       fetchLeads();
     } catch (error) {
       console.error('Error updating lead status:', error);

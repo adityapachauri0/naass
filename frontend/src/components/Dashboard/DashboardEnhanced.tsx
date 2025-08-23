@@ -9,6 +9,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import config from '../../config';
 const XLSX = require('xlsx');
 
 interface Lead {
@@ -113,7 +114,7 @@ const DashboardEnhanced: React.FC = () => {
   const fetchLeads = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5007/api/leads');
+      const response = await axios.get(`${config.api.baseUrl}/leads`);
       const leadsData = response.data.data || response.data;
       setLeads(Array.isArray(leadsData) ? leadsData : []);
       return leadsData;
@@ -128,7 +129,7 @@ const DashboardEnhanced: React.FC = () => {
 
   const fetchDrafts = async () => {
     try {
-      const response = await axios.get('http://localhost:5007/api/drafts/all');
+      const response = await axios.get(`${config.api.baseUrl}/drafts/all`);
       const draftsData = response.data.drafts || [];
       setDrafts(draftsData);
       return draftsData;
@@ -265,7 +266,7 @@ const DashboardEnhanced: React.FC = () => {
 
   const handleStatusChange = async (leadId: string, newStatus: string) => {
     try {
-      await axios.patch(`http://localhost:5007/api/leads/${leadId}`, { status: newStatus });
+      await axios.patch(`${config.api.baseUrl}/leads/${leadId}`, { status: newStatus });
       toast.success('Lead status updated');
       fetchLeads();
     } catch (error) {
@@ -279,11 +280,11 @@ const DashboardEnhanced: React.FC = () => {
       
       if (lead?.isDraft) {
         // Delete draft
-        await axios.delete(`http://localhost:5007/api/drafts/contact/draft?key=${lead.sessionId}`);
+        await axios.delete(`${config.api.baseUrl}/drafts/contact/draft?key=${lead.sessionId}`);
         toast.success('Draft deleted successfully');
       } else {
         // Delete lead
-        await axios.delete(`http://localhost:5007/api/leads/${leadId}`);
+        await axios.delete(`${config.api.baseUrl}/leads/${leadId}`);
         toast.success('Lead deleted successfully');
       }
       
@@ -314,14 +315,14 @@ const DashboardEnhanced: React.FC = () => {
         
         // Delete drafts
         if (draftsToDelete.length > 0) {
-          await axios.post('http://localhost:5007/api/drafts/bulk-delete', {
+          await axios.post(`${config.api.baseUrl}/drafts/bulk-delete`, {
             ids: draftsToDelete
           });
         }
         
         // Delete leads
         if (leadsToDelete.length > 0) {
-          await axios.post('http://localhost:5007/api/leads/bulk-delete', {
+          await axios.post(`${config.api.baseUrl}/leads/bulk-delete`, {
             ids: leadsToDelete
           });
         }

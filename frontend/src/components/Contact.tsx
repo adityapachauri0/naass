@@ -4,6 +4,7 @@ import { Send, Mail, Phone, MapPin, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import config from '../config';
 
 const Contact: React.FC = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post('http://localhost:5007/api/contact', formData);
+      const response = await axios.post(`${config.api.baseUrl}/contact`, formData);
       
       if (response.data.success) {
         toast.success('Thank you! We\'ll get back to you soon.');
