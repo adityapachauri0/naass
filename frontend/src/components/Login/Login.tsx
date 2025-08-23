@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { User, Lock, AlertCircle, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import config from '../../config';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Login: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5007/api/auth/login', {
+      const response = await axios.post(`${config.api.baseUrl}/auth/login`, {
         username,
         password
       });
