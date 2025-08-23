@@ -1,0 +1,63 @@
+# Robots.txt for NAASS
+# https://naass.co.uk
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+Disallow: /admin/
+Disallow: *.json$
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://naass.co.uk/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard
+Crawl-delay: 1
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Host
+Host: https://naass.co.uk

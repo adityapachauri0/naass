@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: naass-frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+    networks:
+      - naass-network
+    restart: unless-stopped
+    volumes:
+      - ./ssl:/etc/nginx/ssl:ro
+      - ./logs/nginx:/var/log/nginx
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: naass-backend
+    ports:
+      - "5007:5007"
+    env_file:
+      - ./backend/.env.production
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - naass-network
+    restart: unless-stopped
+    volumes:
+      - ./logs/app:/app/logs
+      - ./uploads:/app/uploads
+
+  mongodb:
+    image: mongo:6
+    container_name: naass-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secure_password_here
+      - MONGO_INITDB_DATABASE=naass
+    volumes:
+      - mongodb_data:/data/db
+      - ./backup/mongo:/backup
+    networks:
+      - naass-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: naass-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass secure_redis_password_here
+    volumes:
+      - redis_data:/data
+    networks:
+      - naass-network
+    restart: unless-stopped
+
+  # Optional: Nginx reverse proxy with SSL
+  nginx:
+    image: nginx:alpine
+    container_name: naass-nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - naass-network
+    restart: unless-stopped
+
+networks:
+  naass-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+  redis_data:

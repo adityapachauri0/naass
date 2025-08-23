@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production builds
+build/
+dist/
+*/build/
+*/dist/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.eslintcache
+.npm/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker volumes
+data/
+mongodb_data/
+
+# Backup files
+*.bak
+*.backup
+
+# SSL certificates (for local development)
+*.pem
+*.key
+*.crt
+*.cer
+
+# Claude Flow
+.claude-flow/
+.swarm/

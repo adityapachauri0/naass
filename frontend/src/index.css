@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #1a0033, #0f172a);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e938ff, #00d4ff);
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff10f0, #36bcfa);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient text variations */
+.gradient-text {
+  background: linear-gradient(135deg, #e938ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #ff10f0 0%, #ffff00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cool {
+  background: linear-gradient(135deg, #00d4ff 0%, #39ff14 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient backgrounds */
+.animated-gradient {
+  background: linear-gradient(-45deg, #ff10f0, #00d4ff, #39ff14, #e938ff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.mesh-gradient {
+  background-color: #ff10f0;
+  background-image: 
+    radial-gradient(at 40% 20%, #00d4ff 0px, transparent 50%),
+    radial-gradient(at 80% 0%, #39ff14 0px, transparent 50%),
+    radial-gradient(at 0% 50%, #e938ff 0px, transparent 50%),
+    radial-gradient(at 80% 50%, #ffff00 0px, transparent 50%),
+    radial-gradient(at 0% 100%, #ff10f0 0px, transparent 50%),
+    radial-gradient(at 80% 100%, #00d4ff 0px, transparent 50%),
+    radial-gradient(at 0% 0%, #bc13fe 0px, transparent 50%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 
+    0 0 10px rgba(255, 16, 240, 0.8),
+    0 0 20px rgba(255, 16, 240, 0.6),
+    0 0 30px rgba(255, 16, 240, 0.4),
+    0 0 40px rgba(255, 16, 240, 0.2);
+}
+
+.neon-glow-blue {
+  box-shadow: 
+    0 0 10px rgba(0, 212, 255, 0.8),
+    0 0 20px rgba(0, 212, 255, 0.6),
+    0 0 30px rgba(0, 212, 255, 0.4),
+    0 0 40px rgba(0, 212, 255, 0.2);
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 10px rgba(255, 16, 240, 0.8),
+    0 0 20px rgba(255, 16, 240, 0.6),
+    0 0 30px rgba(255, 16, 240, 0.4);
+}
+
+/* Hover effects */
+.glow-hover {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.glow-hover:hover::before {
+  left: 100%;
+}
+
+.glow-hover:hover {
+  box-shadow: 
+    0 0 20px rgba(255, 16, 240, 0.6),
+    0 0 40px rgba(0, 212, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Loading animation */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top-color: #ff10f0;
+  border-right-color: #00d4ff;
+  border-bottom-color: #39ff14;
+  border-left-color: #e938ff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Floating animation */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Morphing blob */
+.blob {
+  background: linear-gradient(135deg, #ff10f0, #00d4ff);
+  animation: morphing 8s ease-in-out infinite;
+  filter: blur(40px);
+  opacity: 0.7;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: 
+    0 20px 40px rgba(255, 16, 240, 0.3),
+    0 10px 20px rgba(0, 212, 255, 0.2);
+}
+
+/* Button styles */
+.btn-neon {
+  position: relative;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ff10f0, #00d4ff);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.btn-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00d4ff, #ff10f0);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-neon:hover::before {
+  opacity: 1;
+}
+
+.btn-neon span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
