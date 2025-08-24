@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
   const testimonials = [
     {
       name: 'David',
-      role: 'CEO, Tech Solutions',
+      role: 'CEO, HDR company',
       content: 'Our leads have drastically improved in both quantity and quality. Their expertise in social and Google PPC has exceeded our expectations, driving real growth for our business.',
       rating: 5,
     },
