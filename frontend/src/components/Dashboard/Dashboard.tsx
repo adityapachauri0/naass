@@ -209,24 +209,24 @@ const Dashboard: React.FC = () => {
   const getStatusColor = (status: Lead['status']) => {
     switch (status) {
       case 'new':
-        return 'text-neon-yellow bg-neon-yellow/10 border-neon-yellow/30';
+        return 'text-gray-500 bg-gray-500/10 border-gray-500/30';
       case 'contacted':
-        return 'text-neon-blue bg-neon-blue/10 border-neon-blue/30';
+        return 'text-orange-500 bg-black/10 border-black/30';
       case 'qualified':
-        return 'text-neon-purple bg-neon-purple/10 border-neon-purple/30';
+        return 'text-orange-500 bg-black/10 border-black/30';
       case 'converted':
-        return 'text-neon-green bg-neon-green/10 border-neon-green/30';
+        return 'text-orange-500 bg-black/10 border-black/30';
       case 'lost':
-        return 'text-red-400 bg-red-400/10 border-red-400/30';
+        return 'text-orange-500 bg-gray-500/10 border-red-400/30';
     }
   };
 
   return (
     <div className="min-h-screen bg-black">
       {/* Background Effects */}
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-500 via-black to-gray-500" />
       <div className="fixed inset-0 bg-mesh-gradient opacity-20" />
-      <div className="fixed inset-0 bg-gradient-radial from-neon-purple/5 via-transparent to-transparent" />
+      <div className="fixed inset-0 bg-gradient-radial from-black/5 via-transparent to-transparent" />
 
       {/* Header */}
       <motion.header
@@ -237,7 +237,7 @@ const Dashboard: React.FC = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50">
+              <div className="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50">
                 <svg 
                   width="20" 
                   height="20" 
@@ -250,10 +250,10 @@ const Dashboard: React.FC = () => {
                 </svg>
               </div>
               <div className="flex items-center space-x-1">
-                <span className="text-2xl font-black text-white tracking-wider">
+                <span className="text-2xl font-black text-orange-500 tracking-wider">
                   NAASS
                 </span>
-                <span className="text-xs text-neon-pink font-medium tracking-widest uppercase">
+                <span className="text-xs text-orange-500 font-medium tracking-widest uppercase">
                   Dashboard
                 </span>
               </div>
@@ -262,13 +262,13 @@ const Dashboard: React.FC = () => {
             <div className="flex items-center gap-4">
               <button
                 onClick={fetchLeads}
-                className="p-2 rounded-lg glass hover:bg-white/10 transition-colors text-white"
+                className="p-2 rounded-lg glass hover:bg-white/10 transition-colors text-orange-500"
               >
                 <RefreshCw size={20} />
               </button>
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/10 transition-colors text-white"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/10 transition-colors text-orange-500"
               >
                 <LogOut size={18} />
                 <span>Logout</span>
@@ -285,21 +285,21 @@ const Dashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-gray-900/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-neon-purple/50 transition-all"
+            className="bg-gray-500/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-black/50 transition-all"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
-                <p className="text-white/60 text-sm mb-1">Total Leads</p>
-                <h3 className="text-3xl font-bold text-white">{stats.total}</h3>
+                <p className="text-orange-500/60 text-sm mb-1">Total Leads</p>
+                <h3 className="text-3xl font-bold text-orange-500">{stats.total}</h3>
               </div>
-              <div className="p-3 bg-gradient-to-br from-neon-purple to-neon-pink rounded-xl">
-                <Users className="w-6 h-6 text-white" />
+              <div className="p-3 bg-gradient-to-br from-black to-black rounded-xl">
+                <Users className="w-6 h-6 text-orange-500" />
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-neon-green" />
-              <span className="text-neon-green text-sm">+{stats.growth}%</span>
-              <span className="text-white/40 text-xs">vs last month</span>
+              <TrendingUp className="w-4 h-4 text-orange-500" />
+              <span className="text-orange-500 text-sm">+{stats.growth}%</span>
+              <span className="text-orange-500/40 text-xs">vs last month</span>
             </div>
           </motion.div>
 
@@ -307,20 +307,20 @@ const Dashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="glass p-6 rounded-2xl border border-white/10 hover:border-neon-blue/50 transition-all"
+            className="glass p-6 rounded-2xl border border-white/10 hover:border-black/50 transition-all"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
-                <p className="text-white/60 text-sm mb-1">New Leads</p>
-                <h3 className="text-3xl font-bold text-white">{stats.new}</h3>
+                <p className="text-orange-500/60 text-sm mb-1">New Leads</p>
+                <h3 className="text-3xl font-bold text-orange-500">{stats.new}</h3>
               </div>
-              <div className="p-3 bg-gradient-to-br from-neon-blue to-neon-cyan rounded-xl">
-                <AlertCircle className="w-6 h-6 text-white" />
+              <div className="p-3 bg-gradient-to-br from-black to-black rounded-xl">
+                <AlertCircle className="w-6 h-6 text-orange-500" />
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-white/40" />
-              <span className="text-white/40 text-xs">Awaiting contact</span>
+              <Clock className="w-4 h-4 text-orange-500/40" />
+              <span className="text-orange-500/40 text-xs">Awaiting contact</span>
             </div>
           </motion.div>
 
@@ -328,20 +328,20 @@ const Dashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="glass p-6 rounded-2xl border border-white/10 hover:border-neon-green/50 transition-all"
+            className="glass p-6 rounded-2xl border border-white/10 hover:border-black/50 transition-all"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
-                <p className="text-white/60 text-sm mb-1">Converted</p>
-                <h3 className="text-3xl font-bold text-white">{stats.converted}</h3>
+                <p className="text-orange-500/60 text-sm mb-1">Converted</p>
+                <h3 className="text-3xl font-bold text-orange-500">{stats.converted}</h3>
               </div>
-              <div className="p-3 bg-gradient-to-br from-neon-green to-neon-yellow rounded-xl">
-                <CheckCircle className="w-6 h-6 text-white" />
+              <div className="p-3 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl">
+                <CheckCircle className="w-6 h-6 text-orange-500" />
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <DollarSign className="w-4 h-4 text-neon-green" />
-              <span className="text-neon-green text-sm">Revenue generating</span>
+              <DollarSign className="w-4 h-4 text-orange-500" />
+              <span className="text-orange-500 text-sm">Revenue generating</span>
             </div>
           </motion.div>
 
@@ -349,20 +349,20 @@ const Dashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="glass p-6 rounded-2xl border border-white/10 hover:border-neon-pink/50 transition-all"
+            className="glass p-6 rounded-2xl border border-white/10 hover:border-black/50 transition-all"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
-                <p className="text-white/60 text-sm mb-1">Conversion Rate</p>
-                <h3 className="text-3xl font-bold text-white">{stats.conversionRate.toFixed(1)}%</h3>
+                <p className="text-orange-500/60 text-sm mb-1">Conversion Rate</p>
+                <h3 className="text-3xl font-bold text-orange-500">{stats.conversionRate.toFixed(1)}%</h3>
               </div>
-              <div className="p-3 bg-gradient-to-br from-neon-pink to-red-500 rounded-xl">
-                <Target className="w-6 h-6 text-white" />
+              <div className="p-3 bg-gradient-to-br from-black to-gray-500 rounded-xl">
+                <Target className="w-6 h-6 text-orange-500" />
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-neon-pink" />
-              <span className="text-white/40 text-xs">Industry avg: 2.5%</span>
+              <TrendingUp className="w-4 h-4 text-orange-500" />
+              <span className="text-orange-500/40 text-xs">Industry avg: 2.5%</span>
             </div>
           </motion.div>
         </div>
@@ -372,19 +372,19 @@ const Dashboard: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-gray-900/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10 mb-8"
+          className="bg-gray-500/80 backdrop-blur-xl p-6 rounded-2xl border border-white/10 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search */}
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-orange-500/40" />
                 <input
                   type="text"
                   placeholder="Search leads..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-neon-purple/50 transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-black/50 transition-colors"
                 />
               </div>
             </div>
@@ -394,7 +394,7 @@ const Dashboard: React.FC = () => {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="appearance-none px-4 py-3 pr-10 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-neon-purple/50 transition-colors cursor-pointer"
+                className="appearance-none px-4 py-3 pr-10 bg-white/5 border border-white/10 rounded-xl text-orange-500 focus:outline-none focus:border-black/50 transition-colors cursor-pointer"
               >
                 <option value="all">All Status</option>
                 <option value="new">New</option>
@@ -403,7 +403,7 @@ const Dashboard: React.FC = () => {
                 <option value="converted">Converted</option>
                 <option value="lost">Lost</option>
               </select>
-              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none" />
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-orange-500/40 pointer-events-none" />
             </div>
 
             {/* Date Filter */}
@@ -411,20 +411,20 @@ const Dashboard: React.FC = () => {
               <select
                 value={dateFilter}
                 onChange={(e) => setDateFilter(e.target.value)}
-                className="appearance-none px-4 py-3 pr-10 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-neon-purple/50 transition-colors cursor-pointer"
+                className="appearance-none px-4 py-3 pr-10 bg-white/5 border border-white/10 rounded-xl text-orange-500 focus:outline-none focus:border-black/50 transition-colors cursor-pointer"
               >
                 <option value="all">All Time</option>
                 <option value="today">Today</option>
                 <option value="week">Last 7 Days</option>
                 <option value="month">Last 30 Days</option>
               </select>
-              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none" />
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-orange-500/40 pointer-events-none" />
             </div>
 
             {/* Export Button */}
             <button
               onClick={exportLeads}
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-xl text-white font-medium hover:shadow-neon-purple transition-all"
+              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-black to-black rounded-xl text-orange-500 font-medium hover:shadow-black transition-all"
             >
               <Download size={18} />
               Export CSV
@@ -437,35 +437,35 @@ const Dashboard: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="bg-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden"
+          className="bg-gray-500/80 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden"
         >
           {loading ? (
             <div className="flex items-center justify-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-neon-purple"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-black"></div>
             </div>
           ) : filteredLeads.length === 0 ? (
             <div className="text-center py-20">
-              <Users className="w-16 h-16 text-white/20 mx-auto mb-4" />
-              <p className="text-white/60">No leads found</p>
+              <Users className="w-16 h-16 text-orange-500/20 mx-auto mb-4" />
+              <p className="text-orange-500/60">No leads found</p>
             </div>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="border-b border-white/10">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-white/60 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-orange-500/60 uppercase tracking-wider">
                       Lead
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-white/60 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-orange-500/60 uppercase tracking-wider">
                       Service
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-white/60 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-orange-500/60 uppercase tracking-wider">
                       Status
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-white/60 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-orange-500/60 uppercase tracking-wider">
                       Date
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-white/60 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-orange-500/60 uppercase tracking-wider">
                       Actions
                     </th>
                   </tr>
@@ -479,10 +479,10 @@ const Dashboard: React.FC = () => {
                     >
                       <td className="px-6 py-4">
                         <div>
-                          <p className="text-white font-medium">{lead.name}</p>
-                          <p className="text-white/60 text-sm">{lead.email}</p>
+                          <p className="text-orange-500 font-medium">{lead.name}</p>
+                          <p className="text-orange-500/60 text-sm">{lead.email}</p>
                           {lead.phone && (
-                            <p className="text-white/40 text-xs flex items-center gap-1 mt-1">
+                            <p className="text-orange-500/40 text-xs flex items-center gap-1 mt-1">
                               <Phone className="w-3 h-3" />
                               {lead.phone}
                             </p>
@@ -490,9 +490,9 @@ const Dashboard: React.FC = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <p className="text-white">{lead.service}</p>
+                        <p className="text-orange-500">{lead.service}</p>
                         {lead.company && (
-                          <p className="text-white/60 text-sm">{lead.company}</p>
+                          <p className="text-orange-500/60 text-sm">{lead.company}</p>
                         )}
                       </td>
                       <td className="px-6 py-4">
@@ -502,10 +502,10 @@ const Dashboard: React.FC = () => {
                         </span>
                       </td>
                       <td className="px-6 py-4">
-                        <p className="text-white text-sm">
+                        <p className="text-orange-500 text-sm">
                           {new Date(lead.createdAt).toLocaleDateString()}
                         </p>
-                        <p className="text-white/40 text-xs">
+                        <p className="text-orange-500/40 text-xs">
                           {new Date(lead.createdAt).toLocaleTimeString()}
                         </p>
                       </td>
@@ -516,7 +516,7 @@ const Dashboard: React.FC = () => {
                               e.stopPropagation();
                               setSelectedLead(lead);
                             }}
-                            className="p-2 rounded-lg hover:bg-white/10 transition-colors text-white/60 hover:text-white"
+                            className="p-2 rounded-lg hover:bg-white/10 transition-colors text-orange-500/60 hover:text-orange-500"
                           >
                             <Eye size={16} />
                           </button>
@@ -527,7 +527,7 @@ const Dashboard: React.FC = () => {
                               updateLeadStatus(lead._id, e.target.value as Lead['status']);
                             }}
                             onClick={(e) => e.stopPropagation()}
-                            className="appearance-none px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white text-sm focus:outline-none focus:border-neon-purple/50 transition-colors cursor-pointer"
+                            className="appearance-none px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-orange-500 text-sm focus:outline-none focus:border-black/50 transition-colors cursor-pointer"
                           >
                             <option value="new">New</option>
                             <option value="contacted">Contacted</option>
@@ -556,14 +556,14 @@ const Dashboard: React.FC = () => {
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="bg-gray-900/95 backdrop-blur-xl rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/10"
+              className="bg-gray-500/95 backdrop-blur-xl rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/10"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-start mb-6">
-                <h2 className="text-2xl font-bold text-white">Lead Details</h2>
+                <h2 className="text-2xl font-bold text-orange-500">Lead Details</h2>
                 <button
                   onClick={() => setSelectedLead(null)}
-                  className="p-2 rounded-lg hover:bg-white/10 transition-colors text-white/60 hover:text-white"
+                  className="p-2 rounded-lg hover:bg-white/10 transition-colors text-orange-500/60 hover:text-orange-500"
                 >
                   <XCircle size={20} />
                 </button>
@@ -571,35 +571,35 @@ const Dashboard: React.FC = () => {
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-white/60 text-sm mb-2">Contact Information</h3>
+                  <h3 className="text-orange-500/60 text-sm mb-2">Contact Information</h3>
                   <div className="space-y-2">
-                    <p className="text-white">
-                      <span className="text-white/60">Name:</span> {selectedLead.name}
+                    <p className="text-orange-500">
+                      <span className="text-orange-500/60">Name:</span> {selectedLead.name}
                     </p>
-                    <p className="text-white">
-                      <span className="text-white/60">Email:</span> {selectedLead.email}
+                    <p className="text-orange-500">
+                      <span className="text-orange-500/60">Email:</span> {selectedLead.email}
                     </p>
                     {selectedLead.phone && (
-                      <p className="text-white">
-                        <span className="text-white/60">Phone:</span> {selectedLead.phone}
+                      <p className="text-orange-500">
+                        <span className="text-orange-500/60">Phone:</span> {selectedLead.phone}
                       </p>
                     )}
                     {selectedLead.company && (
-                      <p className="text-white">
-                        <span className="text-white/60">Company:</span> {selectedLead.company}
+                      <p className="text-orange-500">
+                        <span className="text-orange-500/60">Company:</span> {selectedLead.company}
                       </p>
                     )}
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-white/60 text-sm mb-2">Service & Status</h3>
+                  <h3 className="text-orange-500/60 text-sm mb-2">Service & Status</h3>
                   <div className="space-y-2">
-                    <p className="text-white">
-                      <span className="text-white/60">Service:</span> {selectedLead.service}
+                    <p className="text-orange-500">
+                      <span className="text-orange-500/60">Service:</span> {selectedLead.service}
                     </p>
                     <div className="flex items-center gap-2">
-                      <span className="text-white/60">Status:</span>
+                      <span className="text-orange-500/60">Status:</span>
                       <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(selectedLead.status)}`}>
                         {getStatusIcon(selectedLead.status)}
                         {selectedLead.status}
@@ -610,38 +610,38 @@ const Dashboard: React.FC = () => {
 
                 {selectedLead.message && (
                   <div>
-                    <h3 className="text-white/60 text-sm mb-2">Message</h3>
-                    <p className="text-white bg-white/5 rounded-lg p-4">
+                    <h3 className="text-orange-500/60 text-sm mb-2">Message</h3>
+                    <p className="text-orange-500 bg-white/5 rounded-lg p-4">
                       {selectedLead.message}
                     </p>
                   </div>
                 )}
 
                 <div>
-                  <h3 className="text-white/60 text-sm mb-2">Metadata</h3>
+                  <h3 className="text-orange-500/60 text-sm mb-2">Metadata</h3>
                   <div className="space-y-2">
-                    <p className="text-white">
-                      <span className="text-white/60">Submitted:</span> {new Date(selectedLead.createdAt).toLocaleString()}
+                    <p className="text-orange-500">
+                      <span className="text-orange-500/60">Submitted:</span> {new Date(selectedLead.createdAt).toLocaleString()}
                     </p>
                     {selectedLead.ipAddress && (
-                      <p className="text-white">
-                        <span className="text-white/60">IP Address:</span> {selectedLead.ipAddress}
+                      <p className="text-orange-500">
+                        <span className="text-orange-500/60">IP Address:</span> {selectedLead.ipAddress}
                       </p>
                     )}
                     {selectedLead.location && (
-                      <p className="text-white">
-                        <span className="text-white/60">Location:</span> {selectedLead.location}
+                      <p className="text-orange-500">
+                        <span className="text-orange-500/60">Location:</span> {selectedLead.location}
                       </p>
                     )}
                   </div>
                 </div>
 
                 <div className="flex gap-3 pt-4">
-                  <button className="flex-1 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-xl text-white font-medium hover:shadow-neon-purple transition-all">
+                  <button className="flex-1 py-3 bg-gradient-to-r from-black to-black rounded-xl text-orange-500 font-medium hover:shadow-black transition-all">
                     <Mail className="w-4 h-4 inline mr-2" />
                     Send Email
                   </button>
-                  <button className="flex-1 py-3 bg-gradient-to-r from-neon-blue to-neon-cyan rounded-xl text-white font-medium hover:shadow-neon-blue transition-all">
+                  <button className="flex-1 py-3 bg-gradient-to-r from-black to-black rounded-xl text-orange-500 font-medium hover:shadow-black transition-all">
                     <Phone className="w-4 h-4 inline mr-2" />
                     Call Lead
                   </button>

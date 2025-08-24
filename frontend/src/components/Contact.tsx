@@ -68,10 +68,10 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
             Get A Quote
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-orange-500/80 max-w-3xl mx-auto">
             Ready to grow your business? Let's discuss how we can help you generate quality leads.
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white/80 mb-2 text-sm font-medium">
+                  <label className="block text-orange-500/80 mb-2 text-sm font-medium">
                     Your Name *
                   </label>
                   <input
@@ -96,13 +96,13 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-purple-400 transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-gray-400 transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-white/80 mb-2 text-sm font-medium">
+                  <label className="block text-orange-500/80 mb-2 text-sm font-medium">
                     Email Address *
                   </label>
                   <input
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-purple-400 transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-gray-400 transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white/80 mb-2 text-sm font-medium">
+                  <label className="block text-orange-500/80 mb-2 text-sm font-medium">
                     Phone Number
                   </label>
                   <input
@@ -127,13 +127,13 @@ const Contact: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-purple-400 transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-gray-400 transition-colors"
                     placeholder="+44 20 1234 5678"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-white/80 mb-2 text-sm font-medium">
+                  <label className="block text-orange-500/80 mb-2 text-sm font-medium">
                     Company Name
                   </label>
                   <input
@@ -141,14 +141,14 @@ const Contact: React.FC = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-purple-400 transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-gray-400 transition-colors"
                     placeholder="Your Company Ltd"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-white/80 mb-2 text-sm font-medium">
+                <label className="block text-orange-500/80 mb-2 text-sm font-medium">
                   Service Interested In *
                 </label>
                 <select
@@ -156,11 +156,11 @@ const Contact: React.FC = () => {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-purple-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-orange-500 focus:outline-none focus:border-gray-400 transition-colors"
                 >
-                  <option value="" className="bg-slate-900">Select a service</option>
+                  <option value="" className="bg-gray-500">Select a service</option>
                   {services.map((service) => (
-                    <option key={service} value={service} className="bg-slate-900">
+                    <option key={service} value={service} className="bg-gray-500">
                       {service}
                     </option>
                   ))}
@@ -168,7 +168,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-white/80 mb-2 text-sm font-medium">
+                <label className="block text-orange-500/80 mb-2 text-sm font-medium">
                   Your Message
                 </label>
                 <textarea
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-purple-400 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-gray-400 transition-colors resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -186,7 +186,7 @@ const Contact: React.FC = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-accent-500 to-gray-600 text-orange-500 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-gray-500/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -211,10 +211,10 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-orange-500 mb-4">
                 Let's Start Growing Your Business
               </h3>
-              <p className="text-white/70 mb-8">
+              <p className="text-orange-500/70 mb-8">
                 Ready to take your lead generation to the next level? 
                 Get in touch with us today and let's discuss how we can help you achieve your goals.
               </p>
@@ -225,12 +225,12 @@ const Contact: React.FC = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-1">Email Us</h4>
-                  <p className="text-white/60">info@naass.co.uk</p>
+                  <h4 className="text-orange-500 font-semibold mb-1">Email Us</h4>
+                  <p className="text-orange-500/60">info@naass.co.uk</p>
                 </div>
               </motion.div>
 
@@ -238,12 +238,12 @@ const Contact: React.FC = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-1">Call Us</h4>
-                  <p className="text-white/60">+44 20 1234 5678</p>
+                  <h4 className="text-orange-500 font-semibold mb-1">Call Us</h4>
+                  <p className="text-orange-500/60">+44 20 1234 5678</p>
                 </div>
               </motion.div>
 
@@ -251,12 +251,12 @@ const Contact: React.FC = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-1">Visit Us</h4>
-                  <p className="text-white/60">London, United Kingdom</p>
+                  <h4 className="text-orange-500 font-semibold mb-1">Visit Us</h4>
+                  <p className="text-orange-500/60">London, United Kingdom</p>
                 </div>
               </motion.div>
             </div>
@@ -264,16 +264,16 @@ const Contact: React.FC = () => {
             {/* CTA Box */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="glass rounded-2xl p-6 border border-purple-500/20"
+              className="glass rounded-2xl p-6 border border-gray-400/20"
             >
-              <h4 className="text-xl font-bold text-white mb-2">
+              <h4 className="text-xl font-bold text-orange-500 mb-2">
                 Exclusive Affiliate Network
               </h4>
-              <p className="text-white/70 text-sm mb-4">
+              <p className="text-orange-500/70 text-sm mb-4">
                 Get access to our comprehensive network of carefully selected affiliates 
                 with proven ROI for selected clients.
               </p>
-              <button className="text-purple-400 font-semibold hover:text-purple-300 transition-colors">
+              <button className="text-gray-700 font-semibold hover:text-gray-700 transition-colors">
                 Learn More →
               </button>
             </motion.div>

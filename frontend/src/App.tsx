@@ -8,6 +8,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import ContactWithAutoSave from './components/ContactWithAutoSave';
+import MultiStepContact from './components/MultiStepContact';
 import Footer from './components/Footer';
 import FloatingElements from './components/FloatingElements';
 import ScrollIndicator from './components/ScrollIndicator';
@@ -57,23 +58,22 @@ function App() {
         <Route path="/" element={
           <Suspense fallback={<PageLoading />}>
             <SEO />
-            <div className="min-h-screen relative bg-black overflow-hidden">
-            {/* Animated mesh gradient background */}
-            <div className="fixed inset-0 mesh-gradient opacity-30 animate-gradient-xy" />
+            <div className="min-h-screen relative bg-white overflow-hidden">
+            {/* Removed gradient background */}
             
-            {/* Dark overlay for better contrast */}
-            <div className="fixed inset-0 bg-black/50" />
+            {/* Clean white background */}
+            <div className="fixed inset-0 bg-white" />
             
             <Toaster 
               position="top-right"
               toastOptions={{
                 duration: 4000,
                 style: {
-                  background: 'linear-gradient(135deg, rgba(233, 56, 255, 0.9), rgba(0, 212, 255, 0.9))',
+                  background: '#000000',
                   color: '#fff',
                   backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  boxShadow: '0 0 20px rgba(255, 16, 240, 0.5)',
+                  border: '1px solid rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
                 },
               }}
             />
@@ -144,6 +144,26 @@ function App() {
               keywords="privacy policy, GDPR, data protection, cookies policy, personal data, privacy rights, data security, NAASS privacy"
             />
             <PrivacyPolicy />
+          </Suspense>
+        } />
+        
+        {/* Multi-Step Contact Form Page */}
+        <Route path="/get-started" element={
+          <Suspense fallback={<Loading fullScreen />}>
+            <SEO 
+              title="Get Started - Multi-Step Form"
+              description="Get started with NAASS lead generation services. Complete our detailed form to help us understand your business needs."
+            />
+            <div className="min-h-screen relative bg-white overflow-hidden">
+              <div className="fixed inset-0 bg-white" />
+              <FloatingElements />
+              <ScrollIndicator />
+              <div className="relative z-10">
+                <Navbar />
+                <MultiStepContact />
+                <Footer />
+              </div>
+            </div>
           </Suspense>
         } />
         </Routes>

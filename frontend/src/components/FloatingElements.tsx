@@ -18,7 +18,7 @@ const FloatingElements: React.FC = () => {
         }}
         className="absolute top-20 left-10 w-96 h-96 rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(255,16,240,0.3) 0%, rgba(188,19,254,0.1) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(249,115,22,0.3) 0%, rgba(249,115,22,0.1) 50%, transparent 70%)',
           filter: 'blur(40px)',
         }}
       />
@@ -36,7 +36,7 @@ const FloatingElements: React.FC = () => {
         }}
         className="absolute bottom-20 right-10 w-[500px] h-[500px] rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(0,212,255,0.3) 0%, rgba(57,255,20,0.1) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(249,115,22,0.3) 0%, rgba(249,115,22,0.1) 50%, transparent 70%)',
           filter: 'blur(50px)',
         }}
       />
@@ -54,7 +54,7 @@ const FloatingElements: React.FC = () => {
         }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
         style={{
-          background: 'conic-gradient(from 180deg, rgba(255,255,0,0.2), rgba(255,16,240,0.2), rgba(0,212,255,0.2), rgba(57,255,20,0.2), rgba(255,255,0,0.2))',
+          background: 'conic-gradient(from 180deg, rgba(249,115,22,0.15), rgba(249,115,22,0.2), rgba(249,115,22,0.15), rgba(249,115,22,0.2), rgba(249,115,22,0.15))',
           filter: 'blur(60px)',
         }}
       />
@@ -97,16 +97,16 @@ const FloatingElements: React.FC = () => {
         
         <defs>
           <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ff10f0" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#00d4ff" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#000000" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#000000" stopOpacity="0.8" />
           </linearGradient>
           <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#39ff14" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#ffff00" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.8" />
           </linearGradient>
           <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#bc13fe" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#ff10f0" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#000000" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.8" />
           </linearGradient>
         </defs>
       </svg>
@@ -116,8 +116,8 @@ const FloatingElements: React.FC = () => {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255,16,240,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,212,255,0.1) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
           `,
           backgroundSize: '100px 100px',
           backgroundPosition: '0 0, 0 0',
@@ -132,8 +132,8 @@ const FloatingElements: React.FC = () => {
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            background: ['#ff10f0', '#00d4ff', '#39ff14', '#ffff00', '#bc13fe'][i % 5],
-            boxShadow: `0 0 10px ${['#ff10f0', '#00d4ff', '#39ff14', '#ffff00', '#bc13fe'][i % 5]}`,
+            background: '#f97316',
+            boxShadow: '0 0 10px #f97316',
           }}
           animate={{
             scale: [0, 1.5, 0],

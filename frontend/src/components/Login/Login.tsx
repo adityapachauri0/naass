@@ -38,7 +38,7 @@ const Login: React.FC = () => {
     <div className="min-h-screen bg-dark-950 flex items-center justify-center px-4">
       {/* Background Effects */}
       <div className="fixed inset-0 bg-mesh-gradient opacity-30" />
-      <div className="fixed inset-0 bg-gradient-radial from-neon-purple/10 via-transparent to-transparent" />
+      <div className="fixed inset-0 bg-gradient-radial from-black/10 via-transparent to-transparent" />
       
       {/* Floating orbs */}
       <motion.div
@@ -90,7 +90,7 @@ const Login: React.FC = () => {
                 rotate: [0, 5, 0]
               }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50"
+              className="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50"
             >
               <svg 
                 width="24" 
@@ -104,43 +104,43 @@ const Login: React.FC = () => {
               </svg>
             </motion.div>
             <div className="flex items-center space-x-1">
-              <span className="text-3xl font-black text-white tracking-wider">
+              <span className="text-3xl font-black text-orange-500 tracking-wider">
                 NAASS
               </span>
-              <span className="text-xs text-neon-pink font-medium tracking-widest uppercase">
+              <span className="text-xs text-orange-500 font-medium tracking-widest uppercase">
                 Admin
               </span>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-white text-center mb-2">Welcome Back</h2>
-          <p className="text-white/60 text-center mb-8">Sign in to access your dashboard</p>
+          <h2 className="text-2xl font-bold text-orange-500 text-center mb-2">Welcome Back</h2>
+          <p className="text-orange-500/60 text-center mb-8">Sign in to access your dashboard</p>
 
           {/* Error Message */}
           {error && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-xl flex items-center gap-3"
+              className="mb-6 p-4 bg-gray-500/10 border border-red-500/30 rounded-xl flex items-center gap-3"
             >
-              <AlertCircle className="w-5 h-5 text-red-500" />
-              <p className="text-red-500 text-sm">{error}</p>
+              <AlertCircle className="w-5 h-5 text-orange-500" />
+              <p className="text-orange-500 text-sm">{error}</p>
             </motion.div>
           )}
 
           <form onSubmit={handleLogin} className="space-y-6">
             {/* Username Field */}
             <div>
-              <label className="block text-white/80 text-sm font-medium mb-2">
+              <label className="block text-orange-500/80 text-sm font-medium mb-2">
                 Username
               </label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-orange-500/40" />
                 <input
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-neon-purple/50 transition-colors"
+                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-black/50 transition-colors"
                   placeholder="Enter your username"
                   required
                 />
@@ -149,16 +149,16 @@ const Login: React.FC = () => {
 
             {/* Password Field */}
             <div>
-              <label className="block text-white/80 text-sm font-medium mb-2">
+              <label className="block text-orange-500/80 text-sm font-medium mb-2">
                 Password
               </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-orange-500/40" />
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-neon-purple/50 transition-colors"
+                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-orange-500 placeholder-white/40 focus:outline-none focus:border-black/50 transition-colors"
                   placeholder="Enter your password"
                   required
                 />
@@ -170,11 +170,11 @@ const Login: React.FC = () => {
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
-                  className="w-4 h-4 bg-white/5 border border-white/20 rounded checked:bg-neon-purple checked:border-neon-purple focus:outline-none"
+                  className="w-4 h-4 bg-white/5 border border-white/20 rounded checked:bg-black checked:border-black focus:outline-none"
                 />
-                <span className="text-white/60 text-sm">Remember me</span>
+                <span className="text-orange-500/60 text-sm">Remember me</span>
               </label>
-              <a href="#" className="text-neon-purple text-sm hover:text-neon-pink transition-colors">
+              <a href="#" className="text-orange-500 text-sm hover:text-orange-500 transition-colors">
                 Forgot password?
               </a>
             </div>
@@ -185,10 +185,10 @@ const Login: React.FC = () => {
               disabled={loading}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full relative overflow-hidden py-3 rounded-xl font-bold text-white group disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full relative overflow-hidden py-3 rounded-xl font-bold text-orange-500 group disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue animate-gradient-x" />
-              <div className="absolute inset-0 bg-gradient-to-r from-neon-blue via-neon-pink to-neon-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-black animate-gradient-x" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {loading ? (
                   <>
@@ -207,10 +207,10 @@ const Login: React.FC = () => {
 
           {/* Default Credentials Note */}
           <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/10">
-            <p className="text-white/60 text-xs text-center">
+            <p className="text-orange-500/60 text-xs text-center">
               Demo Credentials:<br />
-              Username: <span className="text-white">admin</span><br />
-              Password: <span className="text-white">admin123</span>
+              Username: <span className="text-orange-500">admin</span><br />
+              Password: <span className="text-orange-500">admin123</span>
             </p>
           </div>
         </div>
@@ -224,7 +224,7 @@ const Login: React.FC = () => {
         >
           <a
             href="/"
-            className="text-white/60 hover:text-white transition-colors text-sm"
+            className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
           >
             ← Back to Home
           </a>

@@ -23,8 +23,8 @@ const ScrollIndicator: React.FC = () => {
         className="fixed top-0 left-0 right-0 h-1 z-[100] origin-left"
         style={{ 
           transformOrigin: '0%',
-          background: `linear-gradient(90deg, #ff10f0 0%, #00d4ff ${scrollProgress}%, #39ff14 100%)`,
-          boxShadow: '0 2px 10px rgba(255, 16, 240, 0.5)',
+          background: scrollProgress > 50 ? '#000000' : '#ffffff',
+          boxShadow: '0 2px 10px rgba(128, 128, 128, 0.5)',
         }}
       />
       
@@ -35,7 +35,7 @@ const ScrollIndicator: React.FC = () => {
         className="fixed top-0 left-0 right-0 h-4 z-[99] origin-left blur-xl"
         style={{ 
           transformOrigin: '0%',
-          background: `linear-gradient(90deg, #ff10f0 0%, #00d4ff ${scrollProgress}%, #39ff14 100%)`,
+          background: scrollProgress > 50 ? '#000000' : '#ffffff',
           opacity: 0.5,
         }}
       />

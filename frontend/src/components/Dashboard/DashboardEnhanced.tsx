@@ -412,11 +412,11 @@ const DashboardEnhanced: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'new': return 'bg-blue-500';
-      case 'contacted': return 'bg-yellow-500';
-      case 'qualified': return 'bg-purple-500';
-      case 'converted': return 'bg-green-500';
-      case 'rejected': return 'bg-red-500';
+      case 'new': return 'bg-gray-500';
+      case 'contacted': return 'bg-gray-500';
+      case 'qualified': return 'bg-gray-500';
+      case 'converted': return 'bg-gray-500';
+      case 'rejected': return 'bg-gray-500';
       case 'draft': return 'bg-gray-500';
       default: return 'bg-gray-500';
     }
@@ -435,21 +435,21 @@ const DashboardEnhanced: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-500 via-gray-500 to-gray-500">
       {/* Header */}
       <div className="bg-black/30 backdrop-blur-xl border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-white">NAASS Dashboard</h1>
+          <h1 className="text-2xl font-bold text-orange-500">NAASS Dashboard</h1>
           <div className="flex items-center gap-4">
             <button
               onClick={fetchAllData}
-              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors"
+              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-orange-500 transition-colors"
             >
               <RefreshCw className="w-5 h-5" />
             </button>
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-400 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-500/20 hover:bg-gray-500/30 text-orange-500 transition-colors"
             >
               <LogOut className="w-4 h-4" />
               Logout
@@ -467,14 +467,14 @@ const DashboardEnhanced: React.FC = () => {
             className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-blue-500/20 rounded-lg">
-                <Users className="w-6 h-6 text-blue-400" />
+              <div className="p-3 bg-gray-500/20 rounded-lg">
+                <Users className="w-6 h-6 text-gray-500" />
               </div>
-              <span className="text-green-400 text-sm">+{stats.growth.toFixed(1)}%</span>
+              <span className="text-gray-500 text-sm">+{stats.growth.toFixed(1)}%</span>
             </div>
-            <h3 className="text-white/60 text-sm mb-1">Total Leads</h3>
-            <p className="text-3xl font-bold text-white">{stats.total}</p>
-            <div className="mt-2 text-xs text-white/50">
+            <h3 className="text-orange-500/60 text-sm mb-1">Total Leads</h3>
+            <p className="text-3xl font-bold text-orange-500">{stats.total}</p>
+            <div className="mt-2 text-xs text-orange-500/50">
               {stats.drafts} drafts • {stats.todayLeads} today
             </div>
           </motion.div>
@@ -486,14 +486,14 @@ const DashboardEnhanced: React.FC = () => {
             className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-purple-500/20 rounded-lg">
-                <Target className="w-6 h-6 text-purple-400" />
+              <div className="p-3 bg-gray-500/20 rounded-lg">
+                <Target className="w-6 h-6 text-gray-700" />
               </div>
-              <span className="text-purple-400 text-sm">Active</span>
+              <span className="text-gray-700 text-sm">Active</span>
             </div>
-            <h3 className="text-white/60 text-sm mb-1">Qualified Leads</h3>
-            <p className="text-3xl font-bold text-white">{stats.qualified}</p>
-            <div className="mt-2 text-xs text-white/50">
+            <h3 className="text-orange-500/60 text-sm mb-1">Qualified Leads</h3>
+            <p className="text-3xl font-bold text-orange-500">{stats.qualified}</p>
+            <div className="mt-2 text-xs text-orange-500/50">
               {stats.new} new • {stats.contacted} contacted
             </div>
           </motion.div>
@@ -505,14 +505,14 @@ const DashboardEnhanced: React.FC = () => {
             className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-green-500/20 rounded-lg">
-                <TrendingUp className="w-6 h-6 text-green-400" />
+              <div className="p-3 bg-gray-500/20 rounded-lg">
+                <TrendingUp className="w-6 h-6 text-gray-500" />
               </div>
-              <span className="text-green-400 text-sm">{stats.conversionRate.toFixed(1)}%</span>
+              <span className="text-gray-500 text-sm">{stats.conversionRate.toFixed(1)}%</span>
             </div>
-            <h3 className="text-white/60 text-sm mb-1">Converted</h3>
-            <p className="text-3xl font-bold text-white">{stats.converted}</p>
-            <div className="mt-2 text-xs text-white/50">
+            <h3 className="text-orange-500/60 text-sm mb-1">Converted</h3>
+            <p className="text-3xl font-bold text-orange-500">{stats.converted}</p>
+            <div className="mt-2 text-xs text-orange-500/50">
               {stats.rejected} rejected
             </div>
           </motion.div>
@@ -524,14 +524,14 @@ const DashboardEnhanced: React.FC = () => {
             className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-yellow-500/20 rounded-lg">
-                <Zap className="w-6 h-6 text-yellow-400" />
+              <div className="p-3 bg-gray-500/20 rounded-lg">
+                <Zap className="w-6 h-6 text-orange-500" />
               </div>
-              <span className="text-yellow-400 text-sm">This Month</span>
+              <span className="text-orange-500 text-sm">This Month</span>
             </div>
-            <h3 className="text-white/60 text-sm mb-1">Recent Activity</h3>
-            <p className="text-3xl font-bold text-white">{stats.monthLeads}</p>
-            <div className="mt-2 text-xs text-white/50">
+            <h3 className="text-orange-500/60 text-sm mb-1">Recent Activity</h3>
+            <p className="text-3xl font-bold text-orange-500">{stats.monthLeads}</p>
+            <div className="mt-2 text-xs text-orange-500/50">
               {stats.weekLeads} this week
             </div>
           </motion.div>
@@ -542,13 +542,13 @@ const DashboardEnhanced: React.FC = () => {
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex-1 min-w-[200px]">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-500/50 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search leads..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-400"
+                  className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-orange-500 placeholder-white/50 focus:outline-none focus:border-gray-400"
                 />
               </div>
             </div>
@@ -556,32 +556,32 @@ const DashboardEnhanced: React.FC = () => {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400"
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-orange-500 focus:outline-none focus:border-gray-400"
             >
-              <option value="all" className="bg-gray-900">All Status</option>
-              <option value="new" className="bg-gray-900">New</option>
-              <option value="contacted" className="bg-gray-900">Contacted</option>
-              <option value="qualified" className="bg-gray-900">Qualified</option>
-              <option value="converted" className="bg-gray-900">Converted</option>
-              <option value="rejected" className="bg-gray-900">Rejected</option>
-              <option value="draft" className="bg-gray-900">Drafts</option>
+              <option value="all" className="bg-gray-500">All Status</option>
+              <option value="new" className="bg-gray-500">New</option>
+              <option value="contacted" className="bg-gray-500">Contacted</option>
+              <option value="qualified" className="bg-gray-500">Qualified</option>
+              <option value="converted" className="bg-gray-500">Converted</option>
+              <option value="rejected" className="bg-gray-500">Rejected</option>
+              <option value="draft" className="bg-gray-500">Drafts</option>
             </select>
 
             <select
               value={dateFilter}
               onChange={(e) => setDateFilter(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400"
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-orange-500 focus:outline-none focus:border-gray-400"
             >
-              <option value="all" className="bg-gray-900">All Time</option>
-              <option value="today" className="bg-gray-900">Today</option>
-              <option value="week" className="bg-gray-900">This Week</option>
-              <option value="month" className="bg-gray-900">This Month</option>
+              <option value="all" className="bg-gray-500">All Time</option>
+              <option value="today" className="bg-gray-500">Today</option>
+              <option value="week" className="bg-gray-500">This Week</option>
+              <option value="month" className="bg-gray-500">This Month</option>
             </select>
 
             {selectedLeads.length > 0 && (
               <button
                 onClick={handleBulkDelete}
-                className="px-4 py-2 bg-red-500/20 hover:bg-red-500/30 text-red-400 rounded-lg transition-colors flex items-center gap-2"
+                className="px-4 py-2 bg-gray-500/20 hover:bg-gray-500/30 text-orange-500 rounded-lg transition-colors flex items-center gap-2"
               >
                 <Trash2 className="w-4 h-4" />
                 Delete ({selectedLeads.length})
@@ -590,7 +590,7 @@ const DashboardEnhanced: React.FC = () => {
 
             <button
               onClick={exportToExcel}
-              className="px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-lg transition-colors flex items-center gap-2"
+              className="px-4 py-2 bg-gray-500/20 hover:bg-gray-500/30 text-gray-500 rounded-lg transition-colors flex items-center gap-2"
             >
               <FileText className="w-4 h-4" />
               Excel
@@ -598,7 +598,7 @@ const DashboardEnhanced: React.FC = () => {
 
             <button
               onClick={exportToCSV}
-              className="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg transition-colors flex items-center gap-2"
+              className="px-4 py-2 bg-gray-500/20 hover:bg-gray-500/30 text-gray-500 rounded-lg transition-colors flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
               CSV
@@ -620,47 +620,47 @@ const DashboardEnhanced: React.FC = () => {
                       className="rounded"
                     />
                   </th>
-                  <th className="p-4 text-left text-white/80 font-medium">
+                  <th className="p-4 text-left text-orange-500/80 font-medium">
                     <button
                       onClick={() => {
                         setSortField('name');
                         setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
                       }}
-                      className="flex items-center gap-1 hover:text-white"
+                      className="flex items-center gap-1 hover:text-orange-500"
                     >
                       Name
                       <ArrowUpDown className="w-4 h-4" />
                     </button>
                   </th>
-                  <th className="p-4 text-left text-white/80 font-medium">Contact</th>
-                  <th className="p-4 text-left text-white/80 font-medium">Service</th>
-                  <th className="p-4 text-left text-white/80 font-medium">Status</th>
-                  <th className="p-4 text-left text-white/80 font-medium">Location</th>
-                  <th className="p-4 text-left text-white/80 font-medium">
+                  <th className="p-4 text-left text-orange-500/80 font-medium">Contact</th>
+                  <th className="p-4 text-left text-orange-500/80 font-medium">Service</th>
+                  <th className="p-4 text-left text-orange-500/80 font-medium">Status</th>
+                  <th className="p-4 text-left text-orange-500/80 font-medium">Location</th>
+                  <th className="p-4 text-left text-orange-500/80 font-medium">
                     <button
                       onClick={() => {
                         setSortField('createdAt');
                         setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
                       }}
-                      className="flex items-center gap-1 hover:text-white"
+                      className="flex items-center gap-1 hover:text-orange-500"
                     >
                       Date
                       <ArrowUpDown className="w-4 h-4" />
                     </button>
                   </th>
-                  <th className="p-4 text-left text-white/80 font-medium">Actions</th>
+                  <th className="p-4 text-left text-orange-500/80 font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {loading ? (
                   <tr>
-                    <td colSpan={8} className="p-8 text-center text-white/50">
+                    <td colSpan={8} className="p-8 text-center text-orange-500/50">
                       Loading...
                     </td>
                   </tr>
                 ) : filteredLeads.length === 0 ? (
                   <tr>
-                    <td colSpan={8} className="p-8 text-center text-white/50">
+                    <td colSpan={8} className="p-8 text-center text-orange-500/50">
                       No leads found
                     </td>
                   </tr>
@@ -678,20 +678,20 @@ const DashboardEnhanced: React.FC = () => {
                       <td className="p-4">
                         <div className="flex items-center gap-3">
                           <div>
-                            <p className="text-white font-medium">{lead.name}</p>
+                            <p className="text-orange-500 font-medium">{lead.name}</p>
                             {lead.company && (
-                              <p className="text-white/50 text-sm">{lead.company}</p>
+                              <p className="text-orange-500/50 text-sm">{lead.company}</p>
                             )}
                             {lead.isDraft && (
                               <div className="flex items-center gap-2 mt-1">
-                                <span className="text-xs text-yellow-400">Draft</span>
+                                <span className="text-xs text-orange-500">Draft</span>
                                 <div className="w-20 h-1 bg-white/10 rounded-full overflow-hidden">
                                   <div
-                                    className="h-full bg-yellow-400"
+                                    className="h-full bg-gray-500"
                                     style={{ width: `${lead.progress || 0}%` }}
                                   />
                                 </div>
-                                <span className="text-xs text-white/50">{lead.progress || 0}%</span>
+                                <span className="text-xs text-orange-500/50">{lead.progress || 0}%</span>
                               </div>
                             )}
                           </div>
@@ -700,23 +700,23 @@ const DashboardEnhanced: React.FC = () => {
                       <td className="p-4">
                         <div className="space-y-1">
                           <div className="flex items-center gap-2">
-                            <Mail className="w-3 h-3 text-white/50" />
-                            <span className="text-white/80 text-sm">{lead.email}</span>
+                            <Mail className="w-3 h-3 text-orange-500/50" />
+                            <span className="text-orange-500/80 text-sm">{lead.email}</span>
                           </div>
                           {lead.phone && (
                             <div className="flex items-center gap-2">
-                              <Phone className="w-3 h-3 text-white/50" />
-                              <span className="text-white/80 text-sm">{lead.phone}</span>
+                              <Phone className="w-3 h-3 text-orange-500/50" />
+                              <span className="text-orange-500/80 text-sm">{lead.phone}</span>
                             </div>
                           )}
                         </div>
                       </td>
                       <td className="p-4">
-                        <span className="text-white/80">{lead.service}</span>
+                        <span className="text-orange-500/80">{lead.service}</span>
                       </td>
                       <td className="p-4">
                         {lead.isDraft ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-500/20 text-gray-400">
+                          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-500/20 text-orange-500">
                             <Save className="w-3 h-3" />
                             Draft
                           </span>
@@ -724,7 +724,7 @@ const DashboardEnhanced: React.FC = () => {
                           <select
                             value={lead.status}
                             onChange={(e) => handleStatusChange(lead._id, e.target.value)}
-                            className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getStatusColor(lead.status)} bg-opacity-20 border border-transparent focus:outline-none`}
+                            className={`px-3 py-1 rounded-full text-xs font-medium text-orange-500 ${getStatusColor(lead.status)} bg-opacity-20 border border-transparent focus:outline-none`}
                           >
                             <option value="new">New</option>
                             <option value="contacted">Contacted</option>
@@ -736,7 +736,7 @@ const DashboardEnhanced: React.FC = () => {
                       </td>
                       <td className="p-4">
                         {lead.location && (
-                          <div className="flex items-center gap-1 text-white/60 text-sm">
+                          <div className="flex items-center gap-1 text-orange-500/60 text-sm">
                             <MapPin className="w-3 h-3" />
                             <span>
                               {lead.location.city && `${lead.location.city}, `}
@@ -745,17 +745,17 @@ const DashboardEnhanced: React.FC = () => {
                           </div>
                         )}
                         {lead.ipAddress && (
-                          <div className="flex items-center gap-1 text-white/40 text-xs mt-1">
+                          <div className="flex items-center gap-1 text-orange-500/40 text-xs mt-1">
                             <Globe className="w-3 h-3" />
                             <span>{lead.ipAddress}</span>
                           </div>
                         )}
                       </td>
                       <td className="p-4">
-                        <div className="text-white/60 text-sm">
+                        <div className="text-orange-500/60 text-sm">
                           {new Date(lead.createdAt).toLocaleDateString()}
                           <br />
-                          <span className="text-xs text-white/40">
+                          <span className="text-xs text-orange-500/40">
                             {new Date(lead.createdAt).toLocaleTimeString()}
                           </span>
                         </div>
@@ -767,7 +767,7 @@ const DashboardEnhanced: React.FC = () => {
                               setSelectedLead(lead);
                               setShowViewModal(true);
                             }}
-                            className="p-2 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 transition-colors"
+                            className="p-2 rounded-lg bg-gray-500/20 hover:bg-gray-500/30 text-gray-500 transition-colors"
                           >
                             <Eye className="w-4 h-4" />
                           </button>
@@ -776,7 +776,7 @@ const DashboardEnhanced: React.FC = () => {
                               setDeleteTargetId(lead._id);
                               setShowDeleteConfirm(true);
                             }}
-                            className="p-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-400 transition-colors"
+                            className="p-2 rounded-lg bg-gray-500/20 hover:bg-gray-500/30 text-orange-500 transition-colors"
                           >
                             <Trash2 className="w-4 h-4" />
                           </button>
@@ -806,56 +806,56 @@ const DashboardEnhanced: React.FC = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gray-900 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-white/20"
+              className="bg-gray-500 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-white/20"
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Lead Details</h2>
+              <h2 className="text-2xl font-bold text-orange-500 mb-4">Lead Details</h2>
               
               <div className="space-y-4">
                 <div>
-                  <label className="text-white/60 text-sm">Name</label>
-                  <p className="text-white">{selectedLead.name}</p>
+                  <label className="text-orange-500/60 text-sm">Name</label>
+                  <p className="text-orange-500">{selectedLead.name}</p>
                 </div>
                 
                 <div>
-                  <label className="text-white/60 text-sm">Email</label>
-                  <p className="text-white">{selectedLead.email}</p>
+                  <label className="text-orange-500/60 text-sm">Email</label>
+                  <p className="text-orange-500">{selectedLead.email}</p>
                 </div>
                 
                 {selectedLead.phone && (
                   <div>
-                    <label className="text-white/60 text-sm">Phone</label>
-                    <p className="text-white">{selectedLead.phone}</p>
+                    <label className="text-orange-500/60 text-sm">Phone</label>
+                    <p className="text-orange-500">{selectedLead.phone}</p>
                   </div>
                 )}
                 
                 {selectedLead.company && (
                   <div>
-                    <label className="text-white/60 text-sm">Company</label>
-                    <p className="text-white">{selectedLead.company}</p>
+                    <label className="text-orange-500/60 text-sm">Company</label>
+                    <p className="text-orange-500">{selectedLead.company}</p>
                   </div>
                 )}
                 
                 <div>
-                  <label className="text-white/60 text-sm">Service</label>
-                  <p className="text-white">{selectedLead.service}</p>
+                  <label className="text-orange-500/60 text-sm">Service</label>
+                  <p className="text-orange-500">{selectedLead.service}</p>
                 </div>
                 
                 {selectedLead.message && (
                   <div>
-                    <label className="text-white/60 text-sm">Message</label>
-                    <p className="text-white whitespace-pre-wrap">{selectedLead.message}</p>
+                    <label className="text-orange-500/60 text-sm">Message</label>
+                    <p className="text-orange-500 whitespace-pre-wrap">{selectedLead.message}</p>
                   </div>
                 )}
                 
                 <div>
-                  <label className="text-white/60 text-sm">Status</label>
-                  <p className="text-white capitalize">{selectedLead.isDraft ? 'Draft' : selectedLead.status}</p>
+                  <label className="text-orange-500/60 text-sm">Status</label>
+                  <p className="text-orange-500 capitalize">{selectedLead.isDraft ? 'Draft' : selectedLead.status}</p>
                 </div>
                 
                 {selectedLead.location && (
                   <div>
-                    <label className="text-white/60 text-sm">Location</label>
-                    <p className="text-white">
+                    <label className="text-orange-500/60 text-sm">Location</label>
+                    <p className="text-orange-500">
                       {selectedLead.location.city && `${selectedLead.location.city}, `}
                       {selectedLead.location.region && `${selectedLead.location.region}, `}
                       {selectedLead.location.country}
@@ -865,14 +865,14 @@ const DashboardEnhanced: React.FC = () => {
                 
                 {selectedLead.ipAddress && (
                   <div>
-                    <label className="text-white/60 text-sm">IP Address</label>
-                    <p className="text-white">{selectedLead.ipAddress}</p>
+                    <label className="text-orange-500/60 text-sm">IP Address</label>
+                    <p className="text-orange-500">{selectedLead.ipAddress}</p>
                   </div>
                 )}
                 
                 <div>
-                  <label className="text-white/60 text-sm">Created</label>
-                  <p className="text-white">
+                  <label className="text-orange-500/60 text-sm">Created</label>
+                  <p className="text-orange-500">
                     {new Date(selectedLead.createdAt).toLocaleString()}
                   </p>
                 </div>
@@ -881,7 +881,7 @@ const DashboardEnhanced: React.FC = () => {
               <div className="mt-6 flex justify-end gap-3">
                 <button
                   onClick={() => setShowViewModal(false)}
-                  className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+                  className="px-4 py-2 bg-white/10 hover:bg-white/20 text-orange-500 rounded-lg transition-colors"
                 >
                   Close
                 </button>
@@ -906,23 +906,23 @@ const DashboardEnhanced: React.FC = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gray-900 rounded-xl p-6 max-w-md w-full border border-white/20"
+              className="bg-gray-500 rounded-xl p-6 max-w-md w-full border border-white/20"
             >
-              <h2 className="text-xl font-bold text-white mb-4">Confirm Delete</h2>
-              <p className="text-white/70 mb-6">
+              <h2 className="text-xl font-bold text-orange-500 mb-4">Confirm Delete</h2>
+              <p className="text-orange-500/70 mb-6">
                 Are you sure you want to delete this lead? This action cannot be undone.
               </p>
               
               <div className="flex justify-end gap-3">
                 <button
                   onClick={() => setShowDeleteConfirm(false)}
-                  className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+                  className="px-4 py-2 bg-white/10 hover:bg-white/20 text-orange-500 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={() => deleteTargetId && handleDeleteLead(deleteTargetId)}
-                  className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors"
+                  className="px-4 py-2 bg-gray-500 hover:bg-gray-500 text-orange-500 rounded-lg transition-colors"
                 >
                   Delete
                 </button>

@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-dark py-3 shadow-neon-purple' : 'bg-transparent py-4'
+        isScrolled ? 'glass-dark py-3 shadow-black' : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                   rotate: [0, 5, 0]
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50"
+                className="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-gray-500/50"
               >
                 <svg 
                   width="20" 
@@ -61,10 +61,10 @@ const Navbar: React.FC = () => {
               </motion.div>
             </div>
             <div className="flex items-center space-x-1">
-              <span className="text-3xl font-black text-white tracking-wider">
+              <span className="text-3xl font-black text-orange-500 tracking-wider">
                 NAASS
               </span>
-              <span className="text-xs text-neon-pink font-medium tracking-widest uppercase">
+              <span className="text-xs text-orange-500 font-medium tracking-widest uppercase">
                 Leads
               </span>
             </div>
@@ -80,10 +80,10 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="relative text-white/90 hover:text-white transition-all duration-200 font-medium group"
+                className="relative text-orange-500/90 hover:text-orange-500 transition-all duration-200 font-medium group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-neon-pink to-neon-blue group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-gray-500 to-gray-600 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </div>
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2 rounded-lg glass hover:bg-white/10 transition-colors"
+            className="md:hidden text-orange-500 p-2 rounded-lg glass hover:bg-white/10 transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -113,7 +113,7 @@ const Navbar: React.FC = () => {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white/90 hover:text-white transition-colors duration-200 font-medium hover:pl-2"
+                    className="text-orange-500/90 hover:text-orange-500 transition-colors duration-200 font-medium hover:pl-2"
                   >
                     {item.name}
                   </a>

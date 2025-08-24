@@ -61,7 +61,7 @@ const PrivacyPolicy: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="fixed top-20 right-10 w-64 h-64 bg-gradient-to-br from-neon-purple/20 to-transparent rounded-full blur-3xl"
+        className="fixed top-20 right-10 w-64 h-64 bg-gradient-to-br from-black/20 to-transparent rounded-full blur-3xl"
       />
       
       <motion.div
@@ -74,7 +74,7 @@ const PrivacyPolicy: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="fixed bottom-20 left-10 w-96 h-96 bg-gradient-to-br from-neon-blue/20 to-transparent rounded-full blur-3xl"
+        className="fixed bottom-20 left-10 w-96 h-96 bg-gradient-to-br from-black/20 to-transparent rounded-full blur-3xl"
       />
 
       <div className="relative z-10">
@@ -88,16 +88,16 @@ const PrivacyPolicy: React.FC = () => {
             <div className="flex items-center justify-between">
               <button
                 onClick={() => navigate('/')}
-                className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+                className="flex items-center gap-2 text-orange-500/70 hover:text-orange-500 transition-colors"
               >
                 <ArrowLeft className="w-5 h-5" />
                 Back to Home
               </button>
               <div className="flex items-center gap-2">
-                <Shield className="w-6 h-6 text-neon-purple" />
-                <span className="text-white font-bold text-xl">Privacy Policy</span>
+                <Shield className="w-6 h-6 text-orange-500" />
+                <span className="text-orange-500 font-bold text-xl">Privacy Policy</span>
               </div>
-              <div className="text-white/60 text-sm">
+              <div className="text-orange-500/60 text-sm">
                 Last Updated: {lastUpdated}
               </div>
             </div>
@@ -112,7 +112,7 @@ const PrivacyPolicy: React.FC = () => {
           className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden xl:block"
         >
           <div className="glass-dark rounded-xl p-4 border border-white/10">
-            <h3 className="text-white font-semibold mb-4 text-sm">Quick Navigation</h3>
+            <h3 className="text-orange-500 font-semibold mb-4 text-sm">Quick Navigation</h3>
             <nav className="space-y-2">
               {sections.map((section) => {
                 const Icon = section.icon;
@@ -120,7 +120,7 @@ const PrivacyPolicy: React.FC = () => {
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className="flex items-center gap-2 text-white/60 hover:text-neon-purple transition-colors text-sm w-full text-left"
+                    className="flex items-center gap-2 text-orange-500/60 hover:text-orange-500 transition-colors text-sm w-full text-left"
                   >
                     <Icon className="w-4 h-4" />
                     <span>{section.title}</span>
@@ -140,13 +140,13 @@ const PrivacyPolicy: React.FC = () => {
           >
             {/* Hero Section */}
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
                 Privacy Policy & GDPR Compliance
               </h1>
-              <p className="text-xl text-white/80">
+              <p className="text-xl text-orange-500/80">
                 Your privacy is important to us. This policy explains how we collect, use, and protect your data.
               </p>
-              <div className="mt-4 flex items-center justify-center gap-4 text-white/60 text-sm">
+              <div className="mt-4 flex items-center justify-center gap-4 text-orange-500/60 text-sm">
                 <span>Effective: {effectiveDate}</span>
                 <span>•</span>
                 <span>GDPR Compliant</span>
@@ -164,21 +164,21 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Shield className="w-8 h-8 text-neon-purple" />
-                  <h2 className="text-3xl font-bold text-white">Overview</h2>
+                  <Shield className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">Overview</h2>
                 </div>
                 <div className="prose prose-invert max-w-none">
-                  <p className="text-white/80 leading-relaxed mb-4">
+                  <p className="text-orange-500/80 leading-relaxed mb-4">
                     NAASS ("we", "our", or "us") is committed to protecting your privacy and ensuring the security of your personal information. 
                     This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
                     and use our services.
                   </p>
-                  <div className="bg-neon-purple/10 border border-neon-purple/30 rounded-xl p-4 mb-4">
+                  <div className="bg-black/10 border border-black/30 rounded-xl p-4 mb-4">
                     <div className="flex items-start gap-3">
-                      <Info className="w-5 h-5 text-neon-purple mt-0.5" />
+                      <Info className="w-5 h-5 text-orange-500 mt-0.5" />
                       <div>
-                        <h4 className="text-white font-semibold mb-2">Key Principles</h4>
-                        <ul className="space-y-2 text-white/70 text-sm">
+                        <h4 className="text-orange-500 font-semibold mb-2">Key Principles</h4>
+                        <ul className="space-y-2 text-orange-500/70 text-sm">
                           <li>• We only collect data necessary for our services</li>
                           <li>• Your data is encrypted and securely stored</li>
                           <li>• You have full control over your personal information</li>
@@ -201,35 +201,35 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Database className="w-8 h-8 text-neon-blue" />
-                  <h2 className="text-3xl font-bold text-white">Data We Collect</h2>
+                  <Database className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">Data We Collect</h2>
                 </div>
                 
                 <div className="space-y-6">
                   {/* Personal Information */}
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-neon-pink" />
+                    <h3 className="text-xl font-semibold text-orange-500 mb-3 flex items-center gap-2">
+                      <Users className="w-5 h-5 text-orange-500" />
                       Personal Information
                     </h3>
-                    <p className="text-white/70 mb-3">
+                    <p className="text-orange-500/70 mb-3">
                       When you submit forms on our website, we collect:
                     </p>
-                    <ul className="space-y-2 text-white/60 ml-6">
+                    <ul className="space-y-2 text-orange-500/60 ml-6">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-gray-500 mt-0.5" />
                         <span>Name and contact details (email, phone number)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-gray-500 mt-0.5" />
                         <span>Company name and business information</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-gray-500 mt-0.5" />
                         <span>Service preferences and requirements</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-gray-500 mt-0.5" />
                         <span>Messages and inquiries you send to us</span>
                       </li>
                     </ul>
@@ -237,28 +237,28 @@ const PrivacyPolicy: React.FC = () => {
 
                   {/* Technical Information */}
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                      <Server className="w-5 h-5 text-neon-purple" />
+                    <h3 className="text-xl font-semibold text-orange-500 mb-3 flex items-center gap-2">
+                      <Server className="w-5 h-5 text-orange-500" />
                       Technical Information
                     </h3>
-                    <p className="text-white/70 mb-3">
+                    <p className="text-orange-500/70 mb-3">
                       We automatically collect certain technical data:
                     </p>
-                    <ul className="space-y-2 text-white/60 ml-6">
+                    <ul className="space-y-2 text-orange-500/60 ml-6">
                       <li className="flex items-start gap-2">
-                        <MapPin className="w-4 h-4 text-neon-pink mt-0.5" />
+                        <MapPin className="w-4 h-4 text-orange-500 mt-0.5" />
                         <span>IP address and approximate geographic location (country/city level)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Clock className="w-4 h-4 text-neon-blue mt-0.5" />
+                        <Clock className="w-4 h-4 text-orange-500 mt-0.5" />
                         <span>Browser type, version, and device information</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Eye className="w-4 h-4 text-neon-purple mt-0.5" />
+                        <Eye className="w-4 h-4 text-orange-500 mt-0.5" />
                         <span>Pages visited and time spent on our website</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Database className="w-4 h-4 text-neon-pink mt-0.5" />
+                        <Database className="w-4 h-4 text-orange-500 mt-0.5" />
                         <span>Form interaction data (for auto-save functionality)</span>
                       </li>
                     </ul>
@@ -276,38 +276,38 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Clock className="w-8 h-8 text-neon-pink" />
-                  <h2 className="text-3xl font-bold text-white">How Auto-Save Works</h2>
+                  <Clock className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">How Auto-Save Works</h2>
                 </div>
                 
                 <div className="space-y-6">
-                  <div className="bg-gradient-to-r from-neon-purple/10 to-neon-blue/10 rounded-xl p-6 border border-white/10">
-                    <h3 className="text-xl font-semibold text-white mb-4">Intelligent Form Protection</h3>
-                    <p className="text-white/80 mb-4">
+                  <div className="bg-gradient-to-r from-black/10 to-black/10 rounded-xl p-6 border border-white/10">
+                    <h3 className="text-xl font-semibold text-orange-500 mb-4">Intelligent Form Protection</h3>
+                    <p className="text-orange-500/80 mb-4">
                       Our auto-save feature is designed to prevent data loss and improve your experience:
                     </p>
                     
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-3">
                         <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-neon-purple/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Clock className="w-4 h-4 text-neon-purple" />
+                          <div className="w-8 h-8 bg-black/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Clock className="w-4 h-4 text-orange-500" />
                           </div>
                           <div>
-                            <h4 className="text-white font-semibold mb-1">Automatic Saving</h4>
-                            <p className="text-white/60 text-sm">
+                            <h4 className="text-orange-500 font-semibold mb-1">Automatic Saving</h4>
+                            <p className="text-orange-500/60 text-sm">
                               Form data is automatically saved every 1.5 seconds as you type
                             </p>
                           </div>
                         </div>
                         
                         <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-neon-blue/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Database className="w-4 h-4 text-neon-blue" />
+                          <div className="w-8 h-8 bg-black/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Database className="w-4 h-4 text-orange-500" />
                           </div>
                           <div>
-                            <h4 className="text-white font-semibold mb-1">Session-Based Storage</h4>
-                            <p className="text-white/60 text-sm">
+                            <h4 className="text-orange-500 font-semibold mb-1">Session-Based Storage</h4>
+                            <p className="text-orange-500/60 text-sm">
                               Each session gets a unique identifier to track your progress
                             </p>
                           </div>
@@ -316,24 +316,24 @@ const PrivacyPolicy: React.FC = () => {
                       
                       <div className="space-y-3">
                         <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-neon-pink/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Shield className="w-4 h-4 text-neon-pink" />
+                          <div className="w-8 h-8 bg-black/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Shield className="w-4 h-4 text-orange-500" />
                           </div>
                           <div>
-                            <h4 className="text-white font-semibold mb-1">Secure Encryption</h4>
-                            <p className="text-white/60 text-sm">
+                            <h4 className="text-orange-500 font-semibold mb-1">Secure Encryption</h4>
+                            <p className="text-orange-500/60 text-sm">
                               All saved data is encrypted using AES-256 encryption
                             </p>
                           </div>
                         </div>
                         
                         <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
+                          <div className="w-8 h-8 bg-gray-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <CheckCircle className="w-4 h-4 text-gray-500" />
                           </div>
                           <div>
-                            <h4 className="text-white font-semibold mb-1">7-Day Retention</h4>
-                            <p className="text-white/60 text-sm">
+                            <h4 className="text-orange-500 font-semibold mb-1">7-Day Retention</h4>
+                            <p className="text-orange-500/60 text-sm">
                               Draft data is automatically deleted after 7 days
                             </p>
                           </div>
@@ -343,18 +343,18 @@ const PrivacyPolicy: React.FC = () => {
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-6">
-                    <h4 className="text-white font-semibold mb-3">What Gets Saved:</h4>
-                    <ul className="space-y-2 text-white/70 text-sm">
+                    <h4 className="text-orange-500 font-semibold mb-3">What Gets Saved:</h4>
+                    <ul className="space-y-2 text-orange-500/70 text-sm">
                       <li>• Form field values (name, email, phone, company, message)</li>
                       <li>• Timestamp of last modification</li>
                       <li>• Session identifier (randomly generated)</li>
                       <li>• IP address for security and session management</li>
                     </ul>
                     
-                    <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
+                    <div className="mt-4 p-3 bg-gray-500/10 border border-yellow-500/30 rounded-lg">
                       <div className="flex items-start gap-2">
-                        <AlertCircle className="w-4 h-4 text-yellow-500 mt-0.5" />
-                        <p className="text-yellow-500 text-sm">
+                        <AlertCircle className="w-4 h-4 text-orange-500 mt-0.5" />
+                        <p className="text-orange-500 text-sm">
                           <strong>Note:</strong> You can disable auto-save at any time using the toggle in the contact form or through privacy settings.
                         </p>
                       </div>
@@ -373,25 +373,25 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Cookie className="w-8 h-8 text-neon-purple" />
-                  <h2 className="text-3xl font-bold text-white">Cookies Policy</h2>
+                  <Cookie className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">Cookies Policy</h2>
                 </div>
                 
-                <p className="text-white/80 mb-6">
+                <p className="text-orange-500/80 mb-6">
                   We use cookies and similar tracking technologies to improve your browsing experience and analyze website traffic.
                 </p>
 
                 <div className="space-y-4">
                   {/* Essential Cookies */}
-                  <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                  <div className="bg-gray-500/10 border border-gray-500/30 rounded-xl p-4">
                     <div className="flex items-start gap-3">
-                      <Lock className="w-5 h-5 text-green-400 mt-0.5" />
+                      <Lock className="w-5 h-5 text-gray-500 mt-0.5" />
                       <div className="flex-1">
-                        <h4 className="text-white font-semibold mb-2">Essential Cookies (Always Active)</h4>
-                        <p className="text-white/70 text-sm mb-2">
+                        <h4 className="text-orange-500 font-semibold mb-2">Essential Cookies (Always Active)</h4>
+                        <p className="text-orange-500/70 text-sm mb-2">
                           Required for the website to function properly. Cannot be disabled.
                         </p>
-                        <ul className="space-y-1 text-white/60 text-sm ml-4">
+                        <ul className="space-y-1 text-orange-500/60 text-sm ml-4">
                           <li>• Session management and security</li>
                           <li>• Privacy consent preferences</li>
                           <li>• Form submission tracking</li>
@@ -401,15 +401,15 @@ const PrivacyPolicy: React.FC = () => {
                   </div>
 
                   {/* Analytics Cookies */}
-                  <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4">
+                  <div className="bg-gray-500/10 border border-gray-500/30 rounded-xl p-4">
                     <div className="flex items-start gap-3">
-                      <Eye className="w-5 h-5 text-blue-400 mt-0.5" />
+                      <Eye className="w-5 h-5 text-gray-500 mt-0.5" />
                       <div className="flex-1">
-                        <h4 className="text-white font-semibold mb-2">Analytics Cookies (Optional)</h4>
-                        <p className="text-white/70 text-sm mb-2">
+                        <h4 className="text-orange-500 font-semibold mb-2">Analytics Cookies (Optional)</h4>
+                        <p className="text-orange-500/70 text-sm mb-2">
                           Help us understand how visitors interact with our website.
                         </p>
-                        <ul className="space-y-1 text-white/60 text-sm ml-4">
+                        <ul className="space-y-1 text-orange-500/60 text-sm ml-4">
                           <li>• Google Analytics for traffic analysis</li>
                           <li>• Page view tracking and user flow</li>
                           <li>• Performance monitoring</li>
@@ -419,15 +419,15 @@ const PrivacyPolicy: React.FC = () => {
                   </div>
 
                   {/* Marketing Cookies */}
-                  <div className="bg-purple-500/10 border border-purple-500/30 rounded-xl p-4">
+                  <div className="bg-gray-500/10 border border-gray-400/30 rounded-xl p-4">
                     <div className="flex items-start gap-3">
-                      <Settings className="w-5 h-5 text-purple-400 mt-0.5" />
+                      <Settings className="w-5 h-5 text-gray-700 mt-0.5" />
                       <div className="flex-1">
-                        <h4 className="text-white font-semibold mb-2">Marketing Cookies (Optional)</h4>
-                        <p className="text-white/70 text-sm mb-2">
+                        <h4 className="text-orange-500 font-semibold mb-2">Marketing Cookies (Optional)</h4>
+                        <p className="text-orange-500/70 text-sm mb-2">
                           Used to deliver relevant advertisements and track campaign effectiveness.
                         </p>
-                        <ul className="space-y-1 text-white/60 text-sm ml-4">
+                        <ul className="space-y-1 text-orange-500/60 text-sm ml-4">
                           <li>• Retargeting and remarketing</li>
                           <li>• Campaign performance tracking</li>
                           <li>• Personalized content delivery</li>
@@ -438,7 +438,7 @@ const PrivacyPolicy: React.FC = () => {
                 </div>
 
                 <div className="mt-6 p-4 bg-white/5 rounded-xl">
-                  <p className="text-white/70 text-sm">
+                  <p className="text-orange-500/70 text-sm">
                     You can manage your cookie preferences at any time by clicking the privacy settings button 
                     in the bottom-left corner of any page.
                   </p>
@@ -455,80 +455,80 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <FileText className="w-8 h-8 text-neon-blue" />
-                  <h2 className="text-3xl font-bold text-white">Your GDPR Rights</h2>
+                  <FileText className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">Your GDPR Rights</h2>
                 </div>
                 
-                <p className="text-white/80 mb-6">
+                <p className="text-orange-500/80 mb-6">
                   Under the General Data Protection Regulation (GDPR), you have the following rights:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <h4 className="text-orange-500 font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-gray-500" />
                       Right to Access
                     </h4>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-orange-500/60 text-sm">
                       Request a copy of the personal data we hold about you.
                     </p>
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <h4 className="text-orange-500 font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-gray-500" />
                       Right to Rectification
                     </h4>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-orange-500/60 text-sm">
                       Request correction of any inaccurate or incomplete personal data.
                     </p>
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <h4 className="text-orange-500 font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-gray-500" />
                       Right to Erasure
                     </h4>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-orange-500/60 text-sm">
                       Request deletion of your personal data ("right to be forgotten").
                     </p>
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <h4 className="text-orange-500 font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-gray-500" />
                       Right to Data Portability
                     </h4>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-orange-500/60 text-sm">
                       Receive your data in a structured, machine-readable format.
                     </p>
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <h4 className="text-orange-500 font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-gray-500" />
                       Right to Object
                     </h4>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-orange-500/60 text-sm">
                       Object to processing of your personal data for certain purposes.
                     </p>
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <h4 className="text-orange-500 font-semibold mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-gray-500" />
                       Right to Withdraw Consent
                     </h4>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-orange-500/60 text-sm">
                       Withdraw consent at any time where we rely on consent to process data.
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 p-4 bg-neon-blue/10 border border-neon-blue/30 rounded-xl">
-                  <p className="text-white/80 text-sm">
+                <div className="mt-6 p-4 bg-black/10 border border-black/30 rounded-xl">
+                  <p className="text-orange-500/80 text-sm">
                     To exercise any of these rights, please contact our Data Protection Officer at 
-                    <a href="mailto:privacy@naass.co.uk" className="text-neon-blue hover:text-neon-purple ml-1">
+                    <a href="mailto:privacy@naass.co.uk" className="text-orange-500 hover:text-orange-500 ml-1">
                       privacy@naass.co.uk
                     </a>
                   </p>
@@ -545,46 +545,46 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Eye className="w-8 h-8 text-neon-pink" />
-                  <h2 className="text-3xl font-bold text-white">How We Use Your Data</h2>
+                  <Eye className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">How We Use Your Data</h2>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-neon-purple rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Service Delivery</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Service Delivery</h4>
+                      <p className="text-orange-500/60 text-sm">
                         Process your inquiries and provide the services you request
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-neon-blue rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Communication</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Communication</h4>
+                      <p className="text-orange-500/60 text-sm">
                         Send you updates, newsletters, and respond to your queries
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-neon-pink rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Improvement</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Improvement</h4>
+                      <p className="text-orange-500/60 text-sm">
                         Analyze usage patterns to improve our website and services
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gray-500 rounded-full mt-2"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Legal Compliance</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Legal Compliance</h4>
+                      <p className="text-orange-500/60 text-sm">
                         Comply with legal obligations and protect our legitimate interests
                       </p>
                     </div>
@@ -602,50 +602,50 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Lock className="w-8 h-8 text-green-400" />
-                  <h2 className="text-3xl font-bold text-white">Data Security</h2>
+                  <Lock className="w-8 h-8 text-gray-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">Data Security</h2>
                 </div>
                 
-                <p className="text-white/80 mb-6">
+                <p className="text-orange-500/80 mb-6">
                   We implement industry-standard security measures to protect your personal information:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-green-400 mt-0.5" />
+                    <Shield className="w-5 h-5 text-gray-500 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Encryption</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Encryption</h4>
+                      <p className="text-orange-500/60 text-sm">
                         AES-256 encryption for data at rest and TLS 1.3 for data in transit
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Lock className="w-5 h-5 text-green-400 mt-0.5" />
+                    <Lock className="w-5 h-5 text-gray-500 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Access Control</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Access Control</h4>
+                      <p className="text-orange-500/60 text-sm">
                         Strict access controls and authentication requirements
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Server className="w-5 h-5 text-green-400 mt-0.5" />
+                    <Server className="w-5 h-5 text-gray-500 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Secure Hosting</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Secure Hosting</h4>
+                      <p className="text-orange-500/60 text-sm">
                         ISO 27001 certified data centers with 24/7 monitoring
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Database className="w-5 h-5 text-green-400 mt-0.5" />
+                    <Database className="w-5 h-5 text-gray-500 mt-0.5" />
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Regular Audits</h4>
-                      <p className="text-white/60 text-sm">
+                      <h4 className="text-orange-500 font-semibold mb-1">Regular Audits</h4>
+                      <p className="text-orange-500/60 text-sm">
                         Regular security audits and penetration testing
                       </p>
                     </div>
@@ -663,18 +663,18 @@ const PrivacyPolicy: React.FC = () => {
                 className="glass-dark rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Mail className="w-8 h-8 text-neon-purple" />
-                  <h2 className="text-3xl font-bold text-white">Contact Us</h2>
+                  <Mail className="w-8 h-8 text-orange-500" />
+                  <h2 className="text-3xl font-bold text-orange-500">Contact Us</h2>
                 </div>
                 
-                <p className="text-white/80 mb-6">
+                <p className="text-orange-500/80 mb-6">
                   If you have any questions about this Privacy Policy or our data practices, please contact us:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3">Data Protection Officer</h4>
-                    <div className="space-y-2 text-white/60 text-sm">
+                    <h4 className="text-orange-500 font-semibold mb-3">Data Protection Officer</h4>
+                    <div className="space-y-2 text-orange-500/60 text-sm">
                       <p className="flex items-center gap-2">
                         <Mail className="w-4 h-4" />
                         privacy@naass.co.uk
@@ -691,19 +691,19 @@ const PrivacyPolicy: React.FC = () => {
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-white font-semibold mb-3">Supervisory Authority</h4>
-                    <div className="space-y-2 text-white/60 text-sm">
+                    <h4 className="text-orange-500 font-semibold mb-3">Supervisory Authority</h4>
+                    <div className="space-y-2 text-orange-500/60 text-sm">
                       <p className="mb-2">
                         You have the right to lodge a complaint with:
                       </p>
-                      <p className="font-semibold text-white">
+                      <p className="font-semibold text-orange-500">
                         Information Commissioner's Office (ICO)
                       </p>
                       <a 
                         href="https://ico.org.uk" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-neon-blue hover:text-neon-purple"
+                        className="text-orange-500 hover:text-orange-500"
                       >
                         www.ico.org.uk
                       </a>
@@ -720,7 +720,7 @@ const PrivacyPolicy: React.FC = () => {
               viewport={{ once: true }}
               className="text-center py-8 border-t border-white/10"
             >
-              <p className="text-white/60 text-sm">
+              <p className="text-orange-500/60 text-sm">
                 This Privacy Policy was last updated on {lastUpdated}. 
                 We may update this policy from time to time, and will notify you of any significant changes.
               </p>

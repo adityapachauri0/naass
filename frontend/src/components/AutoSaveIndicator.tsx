@@ -40,29 +40,29 @@ const AutoSaveIndicator: React.FC<AutoSaveIndicatorProps> = ({
         <div className="glass rounded-lg px-4 py-2 flex items-center gap-2 text-sm">
           {isSaving && (
             <>
-              <Loader2 className="w-4 h-4 text-blue-400 animate-spin" />
-              <span className="text-white/80">Saving...</span>
+              <Loader2 className="w-4 h-4 text-gray-500 animate-spin" />
+              <span className="text-orange-500/80">Saving...</span>
             </>
           )}
           
           {!isSaving && lastSaved && !error && (
             <>
-              <Check className="w-4 h-4 text-green-400" />
-              <span className="text-white/80">Saved {getTimeAgo(lastSaved)}</span>
+              <Check className="w-4 h-4 text-gray-500" />
+              <span className="text-orange-500/80">Saved {getTimeAgo(lastSaved)}</span>
             </>
           )}
           
           {!isSaving && hasUnsavedChanges && !error && (
             <>
-              <Save className="w-4 h-4 text-yellow-400" />
-              <span className="text-white/80">Unsaved changes</span>
+              <Save className="w-4 h-4 text-orange-500" />
+              <span className="text-orange-500/80">Unsaved changes</span>
             </>
           )}
           
           {error && (
             <>
-              <AlertCircle className="w-4 h-4 text-red-400" />
-              <span className="text-red-400">{error}</span>
+              <AlertCircle className="w-4 h-4 text-orange-500" />
+              <span className="text-orange-500">{error}</span>
             </>
           )}
         </div>

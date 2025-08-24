@@ -134,33 +134,33 @@ class ErrorBoundary extends Component<Props, State> {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex justify-center mb-6"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center">
-                  <AlertTriangle className="w-10 h-10 text-red-500" />
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-500/20 to-gray-500/20 rounded-full flex items-center justify-center">
+                  <AlertTriangle className="w-10 h-10 text-orange-500" />
                 </div>
               </motion.div>
 
               {/* Error Message */}
-              <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-4">
                 Oops! Something went wrong
               </h1>
               
-              <p className="text-white/70 text-center mb-8">
+              <p className="text-orange-500/70 text-center mb-8">
                 We encountered an unexpected error. Don't worry, our team has been notified and is working on a fix.
               </p>
 
               {/* Error Details (Development Only) */}
               {config.environment.isDevelopment && this.state.error && (
-                <div className="mb-8 p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
-                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                  <p className="text-red-300 text-sm font-mono break-all">
+                <div className="mb-8 p-4 bg-gray-500/10 border border-red-500/30 rounded-xl">
+                  <h3 className="text-orange-500 font-semibold mb-2">Error Details:</h3>
+                  <p className="text-orange-500 text-sm font-mono break-all">
                     {this.state.error.message}
                   </p>
                   {this.state.errorInfo && (
                     <details className="mt-4">
-                      <summary className="text-red-400 cursor-pointer text-sm">
+                      <summary className="text-orange-500 cursor-pointer text-sm">
                         Component Stack
                       </summary>
-                      <pre className="mt-2 text-red-300 text-xs overflow-auto max-h-40">
+                      <pre className="mt-2 text-orange-500 text-xs overflow-auto max-h-40">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </details>
@@ -174,7 +174,7 @@ class ErrorBoundary extends Component<Props, State> {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={this.handleReset}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-blue text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-purple-500/25 transition-all"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-black to-black text-orange-500 rounded-xl font-semibold flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-gray-500/25 transition-all"
                 >
                   <RefreshCw className="w-5 h-5" />
                   Try Again
@@ -184,7 +184,7 @@ class ErrorBoundary extends Component<Props, State> {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={this.handleGoHome}
-                  className="flex-1 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold flex items-center justify-center gap-2 transition-all"
+                  className="flex-1 px-6 py-3 bg-white/10 hover:bg-white/20 text-orange-500 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all"
                 >
                   <Home className="w-5 h-5" />
                   Go Home
@@ -193,12 +193,12 @@ class ErrorBoundary extends Component<Props, State> {
 
               {/* Contact Support */}
               <div className="mt-8 pt-8 border-t border-white/10">
-                <p className="text-white/60 text-center text-sm">
+                <p className="text-orange-500/60 text-center text-sm">
                   If this problem persists, please contact our support team
                 </p>
                 <a
                   href={`mailto:${config.contact.email}?subject=Error Report&body=Error: ${this.state.error?.message || 'Unknown error'}`}
-                  className="flex items-center justify-center gap-2 text-neon-purple hover:text-neon-pink transition-colors mt-2"
+                  className="flex items-center justify-center gap-2 text-orange-500 hover:text-orange-500 transition-colors mt-2"
                 >
                   <Mail className="w-4 h-4" />
                   {config.contact.email}
@@ -207,8 +207,8 @@ class ErrorBoundary extends Component<Props, State> {
 
               {/* Error Count Warning */}
               {this.state.errorCount > 3 && (
-                <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
-                  <p className="text-yellow-500 text-sm text-center">
+                <div className="mt-4 p-3 bg-gray-500/10 border border-yellow-500/30 rounded-lg">
+                  <p className="text-orange-500 text-sm text-center">
                     Multiple errors detected. Consider refreshing the page.
                   </p>
                 </div>

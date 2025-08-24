@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
             >
               <div className="flex items-center space-x-3 mb-4">
                 {/* Cursor icon similar to favicon */}
-                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50">
+                <div className="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50">
                   <svg 
                     width="20" 
                     height="20" 
@@ -62,16 +62,16 @@ const Footer: React.FC = () => {
                   </svg>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <span className="text-3xl font-black text-white tracking-wider">
+                  <span className="text-3xl font-black text-orange-500 tracking-wider">
                     NAASS
                   </span>
-                  <span className="text-xs text-neon-pink font-medium tracking-widest uppercase">
+                  <span className="text-xs text-orange-500 font-medium tracking-widest uppercase">
                     Leads
                   </span>
                 </div>
               </div>
               
-              <p className="text-white/60 mb-6 max-w-sm">
+              <p className="text-orange-500/60 mb-6 max-w-sm">
                 Creating monumental customer growth through the acquisition of quality leads. 
                 We'll Generate You Quality Digital Leads Without Risk.
               </p>
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-white" />
+                    <social.icon className="w-5 h-5 text-orange-500" />
                   </motion.a>
                 ))}
               </div>
@@ -101,13 +101,13 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-white font-semibold mb-4">Services</h3>
+              <h3 className="text-orange-500 font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-white/60 hover:text-white transition-colors text-sm"
+                      className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
                     >
                       {link.name}
                     </a>
@@ -124,13 +124,13 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-white font-semibold mb-4">Company</h3>
+              <h3 className="text-orange-500 font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-white/60 hover:text-white transition-colors text-sm"
+                      className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
                     >
                       {link.name}
                     </a>
@@ -147,21 +147,21 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="text-white font-semibold mb-4">Legal</h3>
+              <h3 className="text-orange-500 font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
                 {footerLinks.legal.map((link) => (
                   <li key={link.name}>
                     {link.isRoute ? (
                       <Link
                         to={link.href}
-                        className="text-white/60 hover:text-white transition-colors text-sm"
+                        className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
                       >
                         {link.name}
                       </Link>
                     ) : (
                       <a
                         href={link.href}
-                        className="text-white/60 hover:text-white transition-colors text-sm"
+                        className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
                       >
                         {link.name}
                       </a>
@@ -182,16 +182,16 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-purple-400" />
-              <span className="text-white/80">info@naass.co.uk</span>
+              <Mail className="w-5 h-5 text-gray-700" />
+              <span className="text-orange-500/80">info@naass.co.uk</span>
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-purple-400" />
-              <span className="text-white/80">+44 20 1234 5678</span>
+              <Phone className="w-5 h-5 text-gray-700" />
+              <span className="text-orange-500/80">+44 20 1234 5678</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-purple-400" />
-              <span className="text-white/80">London, United Kingdom</span>
+              <MapPin className="w-5 h-5 text-gray-700" />
+              <span className="text-orange-500/80">London, United Kingdom</span>
             </div>
           </div>
         </motion.div>
@@ -199,10 +199,10 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/60 text-sm">
+            <p className="text-orange-500/60 text-sm">
               © {currentYear} NAASS. All rights reserved.
             </p>
-            <p className="text-white/60 text-sm">
+            <p className="text-orange-500/60 text-sm">
               Crafted with passion for growth
             </p>
           </div>

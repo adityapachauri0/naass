@@ -29,17 +29,17 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #1a0033, #0f172a);
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #e938ff, #00d4ff);
+  background: #000000;
   border-radius: 6px;
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff10f0, #36bcfa);
+  background: #000000;
 }
 
 /* Smooth scroll behavior */
@@ -53,7 +53,7 @@ html {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
 .glass-dark {
@@ -66,21 +66,21 @@ html {
 
 /* Gradient text variations */
 .gradient-text {
-  background: linear-gradient(135deg, #e938ff 0%, #00d4ff 100%);
+  background: #000000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-warm {
-  background: linear-gradient(135deg, #ff10f0 0%, #ffff00 100%);
+  background: #000000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-cool {
-  background: linear-gradient(135deg, #00d4ff 0%, #39ff14 100%);
+  background: #000000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -88,21 +88,21 @@ html {
 
 /* Animated gradient backgrounds */
 .animated-gradient {
-  background: linear-gradient(-45deg, #ff10f0, #00d4ff, #39ff14, #e938ff);
+  background: linear-gradient(-45deg, #000000, #ffffff, #000000, #ffffff);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
 
 .mesh-gradient {
-  background-color: #ff10f0;
+  background-color: #000000;
   background-image: 
-    radial-gradient(at 40% 20%, #00d4ff 0px, transparent 50%),
-    radial-gradient(at 80% 0%, #39ff14 0px, transparent 50%),
-    radial-gradient(at 0% 50%, #e938ff 0px, transparent 50%),
-    radial-gradient(at 80% 50%, #ffff00 0px, transparent 50%),
-    radial-gradient(at 0% 100%, #ff10f0 0px, transparent 50%),
-    radial-gradient(at 80% 100%, #00d4ff 0px, transparent 50%),
-    radial-gradient(at 0% 0%, #bc13fe 0px, transparent 50%);
+    radial-gradient(at 40% 20%, #000000 0px, transparent 50%),
+    radial-gradient(at 80% 0%, #ffffff 0px, transparent 50%),
+    radial-gradient(at 0% 50%, #000000 0px, transparent 50%),
+    radial-gradient(at 80% 50%, #ffffff 0px, transparent 50%),
+    radial-gradient(at 0% 100%, #000000 0px, transparent 50%),
+    radial-gradient(at 80% 100%, #ffffff 0px, transparent 50%),
+    radial-gradient(at 0% 0%, #000000 0px, transparent 50%);
 }
 
 @keyframes gradient {
@@ -120,25 +120,25 @@ html {
 /* Neon glow effects */
 .neon-glow {
   box-shadow: 
-    0 0 10px rgba(255, 16, 240, 0.8),
-    0 0 20px rgba(255, 16, 240, 0.6),
-    0 0 30px rgba(255, 16, 240, 0.4),
-    0 0 40px rgba(255, 16, 240, 0.2);
+    0 0 10px rgba(128, 128, 128, 0.8),
+    0 0 20px rgba(128, 128, 128, 0.6),
+    0 0 30px rgba(128, 128, 128, 0.4),
+    0 0 40px rgba(128, 128, 128, 0.2);
 }
 
-.neon-glow-blue {
+.neon-glow-orange {
   box-shadow: 
-    0 0 10px rgba(0, 212, 255, 0.8),
-    0 0 20px rgba(0, 212, 255, 0.6),
-    0 0 30px rgba(0, 212, 255, 0.4),
-    0 0 40px rgba(0, 212, 255, 0.2);
+    0 0 10px rgba(128, 128, 128, 0.8),
+    0 0 20px rgba(128, 128, 128, 0.6),
+    0 0 30px rgba(128, 128, 128, 0.4),
+    0 0 40px rgba(128, 128, 128, 0.2);
 }
 
 .neon-text {
   text-shadow: 
-    0 0 10px rgba(255, 16, 240, 0.8),
-    0 0 20px rgba(255, 16, 240, 0.6),
-    0 0 30px rgba(255, 16, 240, 0.4);
+    0 0 10px rgba(128, 128, 128, 0.8),
+    0 0 20px rgba(128, 128, 128, 0.6),
+    0 0 30px rgba(128, 128, 128, 0.4);
 }
 
 /* Hover effects */
@@ -165,8 +165,8 @@ html {
 
 .glow-hover:hover {
   box-shadow: 
-    0 0 20px rgba(255, 16, 240, 0.6),
-    0 0 40px rgba(0, 212, 255, 0.4);
+    0 0 20px rgba(128, 128, 128, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 
@@ -176,10 +176,10 @@ html {
   height: 48px;
   border: 5px solid transparent;
   border-radius: 50%;
-  border-top-color: #ff10f0;
-  border-right-color: #00d4ff;
-  border-bottom-color: #39ff14;
-  border-left-color: #e938ff;
+  border-top-color: #000000;
+  border-right-color: #ffffff;
+  border-bottom-color: #000000;
+  border-left-color: #ffffff;
   animation: spin 1s linear infinite;
 }
 
@@ -208,7 +208,7 @@ html {
 
 /* Morphing blob */
 .blob {
-  background: linear-gradient(135deg, #ff10f0, #00d4ff);
+  background: #000000;
   animation: morphing 8s ease-in-out infinite;
   filter: blur(40px);
   opacity: 0.7;
@@ -222,15 +222,15 @@ html {
 .card-hover:hover {
   transform: translateY(-8px) rotateX(5deg);
   box-shadow: 
-    0 20px 40px rgba(255, 16, 240, 0.3),
-    0 10px 20px rgba(0, 212, 255, 0.2);
+    0 20px 40px rgba(128, 128, 128, 0.3),
+    0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 /* Button styles */
 .btn-neon {
   position: relative;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #ff10f0, #00d4ff);
+  background: #000000;
   border: none;
   border-radius: 50px;
   color: white;
@@ -246,7 +246,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #00d4ff, #ff10f0);
+  background: #ffffff;
   opacity: 0;
   transition: opacity 0.3s;
 }

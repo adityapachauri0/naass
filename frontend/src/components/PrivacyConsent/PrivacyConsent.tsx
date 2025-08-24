@@ -138,37 +138,37 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
             >
               <div className="glass-dark rounded-xl p-4 border border-white/10 shadow-2xl max-w-md w-full">
               <div className="flex items-start gap-3 mb-3">
-                <Shield className="w-5 h-5 text-neon-purple mt-0.5 flex-shrink-0" />
+                <Shield className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
-                  <h3 className="text-sm font-bold text-white mb-1">
+                  <h3 className="text-sm font-bold text-orange-500 mb-1">
                     Privacy Settings
                   </h3>
-                  <p className="text-white/70 text-xs leading-relaxed">
+                  <p className="text-orange-500/70 text-xs leading-relaxed">
                     We use cookies to enhance your experience. This includes auto-saving form data and collecting analytics.
-                    <a href="/privacy" className="text-neon-purple hover:text-neon-pink underline ml-1">Privacy Policy</a>
+                    <a href="/privacy" className="text-orange-500 hover:text-orange-500 underline ml-1">Privacy Policy</a>
                   </p>
                 </div>
                 <button
                   onClick={() => setShowBanner(false)}
                   className="p-1 hover:bg-white/10 rounded transition-colors flex-shrink-0"
                 >
-                  <X className="w-4 h-4 text-white/60" />
+                  <X className="w-4 h-4 text-orange-500/60" />
                 </button>
               </div>
               
               {/* Compact Feature Icons */}
               <div className="flex items-center justify-center gap-4 mb-3">
                 <div className="flex items-center gap-1.5">
-                  <Database className="w-3.5 h-3.5 text-neon-blue" />
-                  <span className="text-xs text-white/60">Auto-Save</span>
+                  <Database className="w-3.5 h-3.5 text-orange-500" />
+                  <span className="text-xs text-orange-500/60">Auto-Save</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-neon-pink" />
-                  <span className="text-xs text-white/60">Analytics</span>
+                  <MapPin className="w-3.5 h-3.5 text-orange-500" />
+                  <span className="text-xs text-orange-500/60">Analytics</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Cookie className="w-3.5 h-3.5 text-neon-purple" />
-                  <span className="text-xs text-white/60">Cookies</span>
+                  <Cookie className="w-3.5 h-3.5 text-orange-500" />
+                  <span className="text-xs text-orange-500/60">Cookies</span>
                 </div>
               </div>
               
@@ -176,19 +176,19 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
               <div className="flex gap-2">
                 <button
                   onClick={() => setShowSettings(true)}
-                  className="px-3 py-1.5 text-xs bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-all"
+                  className="px-3 py-1.5 text-xs bg-white/10 hover:bg-white/20 text-orange-500 rounded-lg font-medium transition-all"
                 >
                   Settings
                 </button>
                 <button
                   onClick={handleRejectAll}
-                  className="px-3 py-1.5 text-xs bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-all"
+                  className="px-3 py-1.5 text-xs bg-white/10 hover:bg-white/20 text-orange-500 rounded-lg font-medium transition-all"
                 >
                   Reject All
                 </button>
                 <button
                   onClick={handleAcceptAll}
-                  className="flex-1 px-3 py-1.5 text-xs bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-blue hover:to-neon-purple text-white rounded-lg font-medium transition-all"
+                  className="flex-1 px-3 py-1.5 text-xs bg-gradient-to-r from-black to-black hover:from-black hover:to-black text-orange-500 rounded-lg font-medium transition-all"
                 >
                   Accept All
                 </button>
@@ -216,16 +216,16 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-gradient-to-br from-neon-purple/20 to-neon-blue/20 rounded-lg">
-                    <Settings className="w-5 h-5 text-neon-purple" />
+                  <div className="p-2 bg-gradient-to-br from-black/20 to-black/20 rounded-lg">
+                    <Settings className="w-5 h-5 text-orange-500" />
                   </div>
-                  <h2 className="text-2xl font-bold text-white">Privacy Settings</h2>
+                  <h2 className="text-2xl font-bold text-orange-500">Privacy Settings</h2>
                 </div>
                 <button
                   onClick={() => setShowSettings(false)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors"
                 >
-                  <X className="w-5 h-5 text-white/60" />
+                  <X className="w-5 h-5 text-orange-500/60" />
                 </button>
               </div>
 
@@ -235,10 +235,10 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                 <div className="p-4 bg-white/5 rounded-xl">
                   <div className="flex items-center justify-between">
                     <div className="flex items-start gap-3">
-                      <Lock className="w-5 h-5 text-green-400 mt-0.5" />
+                      <Lock className="w-5 h-5 text-gray-500 mt-0.5" />
                       <div>
-                        <h3 className="text-white font-semibold mb-1">Essential Cookies</h3>
-                        <p className="text-white/60 text-sm">
+                        <h3 className="text-orange-500 font-semibold mb-1">Essential Cookies</h3>
+                        <p className="text-orange-500/60 text-sm">
                           Required for the website to function properly. Cannot be disabled.
                         </p>
                       </div>
@@ -250,7 +250,7 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                         disabled
                         className="sr-only"
                       />
-                      <div className="w-12 h-6 bg-green-500 rounded-full opacity-50"></div>
+                      <div className="w-12 h-6 bg-gray-500 rounded-full opacity-50"></div>
                       <div className="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full"></div>
                     </div>
                   </div>
@@ -260,10 +260,10 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                 <div className="p-4 bg-white/5 rounded-xl">
                   <div className="flex items-center justify-between">
                     <div className="flex items-start gap-3">
-                      <Eye className="w-5 h-5 text-neon-blue mt-0.5" />
+                      <Eye className="w-5 h-5 text-orange-500 mt-0.5" />
                       <div>
-                        <h3 className="text-white font-semibold mb-1">Analytics</h3>
-                        <p className="text-white/60 text-sm">
+                        <h3 className="text-orange-500 font-semibold mb-1">Analytics</h3>
+                        <p className="text-orange-500/60 text-sm">
                           Help us understand how visitors interact with our website to improve user experience.
                         </p>
                       </div>
@@ -279,7 +279,7 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                         className="sr-only"
                       />
                       <div className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.analytics ? 'bg-neon-purple' : 'bg-white/20'
+                        settings.analytics ? 'bg-black' : 'bg-white/20'
                       }`}></div>
                       <div className={`absolute top-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
                         settings.analytics ? 'translate-x-6' : 'translate-x-0.5'
@@ -292,10 +292,10 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                 <div className="p-4 bg-white/5 rounded-xl">
                   <div className="flex items-center justify-between">
                     <div className="flex items-start gap-3">
-                      <Database className="w-5 h-5 text-neon-pink mt-0.5" />
+                      <Database className="w-5 h-5 text-orange-500 mt-0.5" />
                       <div>
-                        <h3 className="text-white font-semibold mb-1">Auto-Save</h3>
-                        <p className="text-white/60 text-sm">
+                        <h3 className="text-orange-500 font-semibold mb-1">Auto-Save</h3>
+                        <p className="text-orange-500/60 text-sm">
                           Automatically save your form progress to prevent data loss. Includes IP address for session management.
                         </p>
                       </div>
@@ -311,7 +311,7 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                         className="sr-only"
                       />
                       <div className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.autoSave ? 'bg-neon-purple' : 'bg-white/20'
+                        settings.autoSave ? 'bg-black' : 'bg-white/20'
                       }`}></div>
                       <div className={`absolute top-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
                         settings.autoSave ? 'translate-x-6' : 'translate-x-0.5'
@@ -324,10 +324,10 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                 <div className="p-4 bg-white/5 rounded-xl">
                   <div className="flex items-center justify-between">
                     <div className="flex items-start gap-3">
-                      <Cookie className="w-5 h-5 text-neon-purple mt-0.5" />
+                      <Cookie className="w-5 h-5 text-orange-500 mt-0.5" />
                       <div>
-                        <h3 className="text-white font-semibold mb-1">Marketing</h3>
-                        <p className="text-white/60 text-sm">
+                        <h3 className="text-orange-500 font-semibold mb-1">Marketing</h3>
+                        <p className="text-orange-500/60 text-sm">
                           Used to deliver personalized advertisements and measure campaign effectiveness.
                         </p>
                       </div>
@@ -343,7 +343,7 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
                         className="sr-only"
                       />
                       <div className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.marketing ? 'bg-neon-purple' : 'bg-white/20'
+                        settings.marketing ? 'bg-black' : 'bg-white/20'
                       }`}></div>
                       <div className={`absolute top-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
                         settings.marketing ? 'translate-x-6' : 'translate-x-0.5'
@@ -354,8 +354,8 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
               </div>
 
               {/* Info Box */}
-              <div className="p-4 bg-neon-purple/10 border border-neon-purple/30 rounded-xl mb-6">
-                <p className="text-white/80 text-sm">
+              <div className="p-4 bg-black/10 border border-black/30 rounded-xl mb-6">
+                <p className="text-orange-500/80 text-sm">
                   <span className="font-semibold">Note:</span> Essential cookies are always enabled as they are necessary for the website to function. 
                   You can change your preferences at any time by clicking the privacy settings link in the footer.
                 </p>
@@ -365,19 +365,19 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
               <div className="flex gap-3">
                 <button
                   onClick={handleSaveSettings}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-blue hover:to-neon-purple text-white rounded-xl font-semibold transition-all"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-black to-black hover:from-black hover:to-black text-orange-500 rounded-xl font-semibold transition-all"
                 >
                   Save Preferences
                 </button>
                 <button
                   onClick={handleRejectAll}
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold transition-all"
+                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-orange-500 rounded-xl font-semibold transition-all"
                 >
                   Reject All
                 </button>
                 <button
                   onClick={handleAcceptAll}
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold transition-all"
+                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-orange-500 rounded-xl font-semibold transition-all"
                 >
                   Accept All
                 </button>
@@ -393,10 +393,10 @@ const PrivacyConsent: React.FC<PrivacyConsentProps> = ({ onConsentUpdate }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1 }}
         onClick={() => setShowSettings(true)}
-        className="fixed bottom-4 left-4 z-40 p-3 glass-dark rounded-full border border-white/10 hover:border-neon-purple/50 transition-all group"
+        className="fixed bottom-4 left-4 z-40 p-3 glass-dark rounded-full border border-white/10 hover:border-black/50 transition-all group"
         title="Privacy Settings"
       >
-        <Shield className="w-5 h-5 text-white/60 group-hover:text-neon-purple transition-colors" />
+        <Shield className="w-5 h-5 text-orange-500/60 group-hover:text-orange-500 transition-colors" />
       </motion.button>
     </>
   );

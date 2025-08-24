@@ -88,7 +88,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {/* Placeholder with blur effect */}
       {!imageLoaded && (
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 animate-pulse"
+          className="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-500 animate-pulse"
           style={{
             filter: 'blur(20px)',
             transform: 'scale(1.1)',

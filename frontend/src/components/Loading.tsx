@@ -36,7 +36,7 @@ const Loading: React.FC<LoadingProps> = ({
           rotate: { duration: 3, repeat: Infinity, ease: "linear" },
           scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
         }}
-        className={`${sizeClasses[size]} bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50`}
+        className={`${sizeClasses[size]} bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50`}
       >
         <svg 
           width={size === 'small' ? 16 : size === 'medium' ? 24 : 32}
@@ -55,7 +55,7 @@ const Loading: React.FC<LoadingProps> = ({
         {[0, 1, 2].map((index) => (
           <motion.div
             key={index}
-            className={`${dotSizes[size]} bg-gradient-to-r from-neon-purple to-neon-blue rounded-full`}
+            className={`${dotSizes[size]} bg-gradient-to-r from-black to-black rounded-full`}
             animate={{
               y: [0, -10, 0],
               opacity: [0.5, 1, 0.5],
@@ -76,7 +76,7 @@ const Loading: React.FC<LoadingProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-white/70 text-sm font-medium"
+          className="text-orange-500/70 text-sm font-medium"
         >
           {message}
         </motion.p>

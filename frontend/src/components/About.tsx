@@ -43,17 +43,17 @@ const About: React.FC = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6">
               Work with a team <span className="gradient-text">who cares</span>
             </h2>
             
-            <p className="text-white/80 text-lg mb-8 leading-relaxed">
+            <p className="text-orange-500/80 text-lg mb-8 leading-relaxed">
               At NAASS, we're more than just marketers—we're partners invested in your success. 
               Our team takes the time to understand your business, your goals, and your audience 
               to create personalized strategies that truly deliver.
             </p>
 
-            <p className="text-white/80 text-lg mb-8 leading-relaxed">
+            <p className="text-orange-500/80 text-lg mb-8 leading-relaxed">
               Every campaign we launch is crafted with care, ensuring not just results but 
               meaningful impact. With a focus on collaboration, transparency, and a genuine 
               passion for what we do, we're here to grow your brand and support your vision 
@@ -63,7 +63,7 @@ const About: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-purple-500/25 transition-all duration-300"
+              className="bg-gradient-to-r from-accent-500 to-gray-600 text-orange-500 px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-gray-500/25 transition-all duration-300"
             >
               Learn More About Us
             </motion.button>
@@ -80,11 +80,11 @@ const About: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="glass rounded-2xl p-6 text-center group"
               >
-                <div className="w-14 h-14 mx-auto bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-purple-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                  <value.icon className="w-7 h-7 text-purple-400" />
+                <div className="w-14 h-14 mx-auto bg-gradient-to-br from-gray-500/20 to-gray-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-gray-500/30 group-hover:to-gray-500/30 transition-all duration-300">
+                  <value.icon className="w-7 h-7 text-gray-700" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-white/60 text-sm">{value.description}</p>
+                <h3 className="text-xl font-semibold text-orange-500 mb-2">{value.title}</h3>
+                <p className="text-orange-500/60 text-sm">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -97,10 +97,10 @@ const About: React.FC = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-20 glass rounded-3xl p-12 text-center"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-3xl font-bold text-orange-500 mb-4">
             When you work with us, you work with a team who truly cares about your success.
           </h3>
-          <p className="text-white/70 text-lg max-w-3xl mx-auto">
+          <p className="text-orange-500/70 text-lg max-w-3xl mx-auto">
             With years of expertise and a proven track record, we've helped businesses 
             across multiple sectors achieve extraordinary growth through quality lead generation.
           </p>
