@@ -1,6 +1,7 @@
 import SEOHead from '../../components/SEOHead';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import RelatedServices from '../../components/RelatedServices';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, AlertTriangle, CheckCircle, Users, ClipboardList, TrendingUp } from 'lucide-react';
@@ -174,6 +175,9 @@ export default function HousingDisrepairPage() {
               </motion.div>
             </div>
           </section>
+
+          {/* Related Services */}
+          <RelatedServices currentSlug="housing-disrepair" />
 
           {/* CTA */}
           <section className="bg-gray-50 py-16">

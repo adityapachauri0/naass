@@ -1,6 +1,7 @@
 import SEOHead from '../../components/SEOHead';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import RelatedServices from '../../components/RelatedServices';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Share2, Target, Users, BarChart2, CheckCircle, Zap } from 'lucide-react';
@@ -161,6 +162,9 @@ export default function SocialMediaPage() {
               </div>
             </div>
           </section>
+
+          {/* Related Services */}
+          <RelatedServices currentSlug="social-media" />
 
           {/* CTA */}
           <section className="bg-gray-50 py-16">

@@ -1,6 +1,7 @@
 import SEOHead from '../../components/SEOHead';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import RelatedServices from '../../components/RelatedServices';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Heart, Star, CheckCircle, Users, TrendingUp, ShieldCheck } from 'lucide-react';
@@ -172,6 +173,9 @@ export default function LifeInsurancePage() {
               </motion.div>
             </div>
           </section>
+
+          {/* Related Services */}
+          <RelatedServices currentSlug="life-insurance" />
 
           {/* CTA */}
           <section className="bg-gray-50 py-16">

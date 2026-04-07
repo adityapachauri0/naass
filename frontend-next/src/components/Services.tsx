@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Target, 
-  Globe, 
-  Users, 
+import Link from 'next/link';
+import {
+  Target,
+  Globe,
+  Users,
   Zap,
   Home,
   Heart,
@@ -39,10 +40,10 @@ const Services: React.FC = () => {
   ];
 
   const sectors = [
-    { icon: Zap, name: 'ECO 4', description: 'Energy efficiency schemes' },
-    { icon: Home, name: 'Housing Disrepair', description: 'Property claim leads' },
-    { icon: Heart, name: 'Life Insurance', description: 'Insurance lead generation' },
-    { icon: Building, name: '& Many More', description: 'Custom campaigns' },
+    { icon: Zap, name: 'ECO 4', description: 'Energy efficiency schemes', href: '/services/eco-4' },
+    { icon: Home, name: 'Housing Disrepair', description: 'Property claim leads', href: '/services/housing-disrepair' },
+    { icon: Heart, name: 'Life Insurance', description: 'Insurance lead generation', href: '/services/life-insurance' },
+    { icon: Building, name: '& Many More', description: 'Custom campaigns', href: '/get-started' },
   ];
 
   return (
@@ -97,20 +98,21 @@ const Services: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {sectors.map((sector, index) => (
-              <motion.div
-                key={sector.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.8 + index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="text-center group"
-              >
-                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-500/20 to-gray-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:from-gray-500/30 group-hover:to-gray-500/30 transition-all duration-300">
-                  <sector.icon className="w-10 h-10 text-gray-700" />
-                </div>
-                <h4 className="text-xl font-semibold text-orange-500 mb-2">{sector.name}</h4>
-                <p className="text-orange-500/60 text-sm">{sector.description}</p>
-              </motion.div>
+              <Link key={sector.name} href={sector.href} className="block">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.8 + index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="text-center group cursor-pointer"
+                >
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-gray-500/20 to-gray-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:from-gray-500/30 group-hover:to-gray-500/30 transition-all duration-300">
+                    <sector.icon className="w-10 h-10 text-gray-700" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-orange-500 mb-2">{sector.name}</h4>
+                  <p className="text-orange-500/60 text-sm">{sector.description}</p>
+                </motion.div>
+              </Link>
             ))}
           </div>
 

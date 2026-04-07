@@ -1,6 +1,7 @@
 import SEOHead from '../../components/SEOHead';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import RelatedServices from '../../components/RelatedServices';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Search, BarChart2, Target, Zap, CheckCircle, TrendingUp } from 'lucide-react';
@@ -164,6 +165,9 @@ export default function GooglePPCPage() {
               </motion.div>
             </div>
           </section>
+
+          {/* Related Services */}
+          <RelatedServices currentSlug="google-ppc" />
 
           {/* CTA */}
           <section className="bg-gray-50 py-16">
