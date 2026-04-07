@@ -23,8 +23,8 @@ import { useRouter } from 'next/router';
 
 const PrivacyPolicy: React.FC = () => {
   const router = useRouter();
-  const lastUpdated = "January 2025";
-  const effectiveDate = "January 1, 2025";
+  const lastUpdated = "April 2026";
+  const effectiveDate = "April 8, 2026";
 
   const sections = [
     { id: 'overview', title: 'Overview', icon: Shield },

@@ -9,7 +9,7 @@ export default function Document() {
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="NAASS" />
         <meta name="publisher" content="NAASS" />
-        <meta name="copyright" content="© 2025 NAASS. All rights reserved." />
+        <meta name="copyright" content="© 2026 NAASS. All rights reserved." />
         <meta name="rating" content="General" />
         <meta name="distribution" content="Global" />
         <meta name="revisit-after" content="7 days" />
