@@ -20,9 +20,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const router = useRouter();
   const siteUrl = 'https://naass.co.uk';
   const defaultTitle = 'NAASS - Premium Lead Generation & Digital Marketing Services UK';
-  const defaultDescription = 'NAASS delivers high-quality ECO 4, Housing Disrepair, and Life Insurance leads. Expert Google PPC, Social Media Advertising, and Native Advertising services. Generate quality digital leads without risk.';
+  const defaultDescription = 'NAASS delivers high-quality ECO 4, Housing Disrepair, and Life Insurance leads across the UK. Expert PPC and social media advertising services. Get a free quote.';
   const defaultKeywords = 'lead generation UK, ECO 4 leads, housing disrepair leads, life insurance leads, Google PPC services, social media advertising, native advertising, digital marketing UK, quality leads, B2B lead generation, performance marketing';
-  const defaultImage = `${siteUrl}/og-image.jpg`;
+  const defaultImage = `${siteUrl}/naass-logo.png`;
 
   const seo = {
     title: title ? `${title} | NAASS` : defaultTitle,
@@ -35,10 +35,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const organizationSchema = {
     "@context": "https://schema.org", "@type": "Organization",
     "name": "NAASS", "alternateName": "NAASS Leads", "url": siteUrl,
-    "logo": `${siteUrl}/logo.png`, "description": defaultDescription,
-    "contactPoint": [{ "@type": "ContactPoint", "telephone": "+44-20-1234-5678", "contactType": "Sales", "email": "info@naass.co.uk", "areaServed": "GB", "availableLanguage": ["English"] }],
-    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
-    "sameAs": ["https://www.facebook.com/naass", "https://www.twitter.com/naass", "https://www.linkedin.com/company/naass", "https://www.instagram.com/naass"]
+    "logo": `${siteUrl}/naass-logo.png`, "description": defaultDescription,
+    "contactPoint": [{ "@type": "ContactPoint", "contactType": "Sales", "email": "info@naass.co.uk", "areaServed": "GB", "availableLanguage": ["English"] }],
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
   };
 
   const serviceSchema = {
@@ -60,7 +59,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   const localBusinessSchema = {
     "@context": "https://schema.org", "@type": "LocalBusiness",
-    "name": "NAASS", "image": defaultImage, "telephone": "+44-20-1234-5678", "email": "info@naass.co.uk",
+    "name": "NAASS", "image": defaultImage, "email": "info@naass.co.uk",
     "address": { "@type": "PostalAddress", "addressLocality": "London", "addressRegion": "Greater London", "addressCountry": "GB" },
     "url": siteUrl,
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },

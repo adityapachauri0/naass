@@ -29,6 +29,8 @@ export default function Document() {
         />
         <link rel="apple-touch-icon" href="/naass-logo.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="alternate" hrefLang="en-gb" href="https://naass.co.uk/" />
+        <link rel="alternate" hrefLang="x-default" href="https://naass.co.uk/" />
       </Head>
       <body>
         <Main />

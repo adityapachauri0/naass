@@ -19,12 +19,14 @@ Crawl-delay: 1
 User-agent: Googlebot
 Allow: /
 Disallow: /dashboard
+Disallow: /login
 Crawl-delay: 0
 
 # Bing
 User-agent: Bingbot
 Allow: /
 Disallow: /dashboard
+Disallow: /login
 Crawl-delay: 1
 
 # Social Media Crawlers
@@ -44,12 +46,6 @@ User-agent: Slackbot
 Allow: /
 
 # Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
 User-agent: DotBot
 Disallow: /
 
