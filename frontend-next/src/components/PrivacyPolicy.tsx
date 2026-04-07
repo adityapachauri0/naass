@@ -680,10 +680,6 @@ const PrivacyPolicy: React.FC = () => {
                         privacy@naass.co.uk
                       </p>
                       <p className="flex items-center gap-2">
-                        <Phone className="w-4 h-4" />
-                        +44 20 1234 5678
-                      </p>
-                      <p className="flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
                         London, United Kingdom
                       </p>

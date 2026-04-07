@@ -88,7 +88,7 @@ const config: Config = {
   },
   contact: {
     email: process.env.REACT_APP_CONTACT_EMAIL || 'info@naass.co.uk',
-    phone: process.env.REACT_APP_PHONE_NUMBER || '+44 20 1234 5678',
+    phone: '',
   },
   social: {
     facebook: process.env.REACT_APP_FACEBOOK_URL || 'https://facebook.com/naass',

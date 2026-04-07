@@ -239,19 +239,6 @@ const Contact: React.FC = () => {
                 className="flex items-start gap-4"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-gray-700" />
-                </div>
-                <div>
-                  <h4 className="text-orange-500 font-semibold mb-1">Call Us</h4>
-                  <p className="text-orange-500/60">+44 20 1234 5678</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ x: 10 }}
-                className="flex items-start gap-4"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
