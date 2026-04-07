@@ -1,0 +1,48 @@
+{
+  "short_name": "NAASS",
+  "name": "NAASS - Lead Generation Services",
+  "description": "Premium lead generation and digital marketing services. ECO 4, Housing Disrepair, Life Insurance leads & more.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "categories": ["business", "marketing", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Get Quote",
+      "short_name": "Quote",
+      "description": "Get a quote for lead generation services",
+      "url": "/#contact"
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our lead generation services",
+      "url": "/#services"
+    }
+  ],
+  "prefer_related_applications": false
+}
