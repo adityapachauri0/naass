@@ -7,6 +7,7 @@ import About from '../components/About';
 import Testimonials from '../components/Testimonials';
 import ContactWithAutoSave from '../components/ContactWithAutoSave';
 import Footer from '../components/Footer';
+import FAQ from '../components/FAQ';
 import FloatingElements from '../components/FloatingElements';
 import ScrollIndicator from '../components/ScrollIndicator';
 import PrivacyConsent from '../components/PrivacyConsent/PrivacyConsent';
@@ -33,6 +34,7 @@ export default function Home() {
           <Services />
           <About />
           <Testimonials />
+          <FAQ />
           <ContactWithAutoSave consentSettings={consentSettings} />
           <Footer />
         </div>

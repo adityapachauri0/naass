@@ -8,11 +8,11 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'ECO 4 Leads', href: '/#services' },
-      { name: 'Housing Disrepair', href: '/#services' },
-      { name: 'Life Insurance', href: '/#services' },
-      { name: 'Google PPC', href: '/#services' },
-      { name: 'Social Media Ads', href: '/#services' },
+      { name: 'ECO 4 Leads', href: '/services/eco-4', isRoute: true },
+      { name: 'Housing Disrepair', href: '/services/housing-disrepair', isRoute: true },
+      { name: 'Life Insurance', href: '/services/life-insurance', isRoute: true },
+      { name: 'Google PPC', href: '/services/google-ppc', isRoute: true },
+      { name: 'Social Media Ads', href: '/services/social-media', isRoute: true },
     ],
     company: [
       { name: 'About Us', href: '/#about' },
@@ -100,12 +100,21 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
+                    {link.isRoute ? (
+                      <Link
+                        href={link.href}
+                        className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-orange-500/60 hover:text-orange-500 transition-colors text-sm"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
