@@ -48,13 +48,15 @@ const Navbar: React.FC = () => {
                 transition={{ duration: 2, repeat: Infinity }}
                 className="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-gray-500/50"
               >
-                <svg 
-                  width="20" 
-                  height="20" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
                   fill="white"
                   className="transform"
                   style={{ transform: 'rotate(345deg)' }}
+                  role="img"
+                  aria-label="NAASS Leads logo"
                 >
                   <path d="M3 3l18 9-9 2-2 9z" />
                 </svg>

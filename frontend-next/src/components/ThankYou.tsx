@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { 
-  CheckCircle, 
-  Sparkles, 
-  Mail, 
-  Clock, 
+import {
+  CheckCircle,
+  Sparkles,
+  Mail,
+  Clock,
   ArrowRight,
-  Phone,
   MessageSquare,
   Calendar,
   Zap,
@@ -340,11 +339,11 @@ const ThankYou: React.FC = () => {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="tel:+442012345678"
+                  href="mailto:info@naass.co.uk"
                   className="px-8 py-4 glass border border-gray-400/30 text-orange-500 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  <Phone className="w-5 h-5" />
-                  Call Us Now
+                  <Mail className="w-5 h-5" />
+                  Email Us
                 </motion.a>
               </motion.div>
 
@@ -357,7 +356,7 @@ const ThankYou: React.FC = () => {
               >
                 <p className="mb-2">Need immediate assistance?</p>
                 <p className="text-orange-500">
-                  📧 info@naass.co.uk | 📱 +44 20 1234 5678
+                  📧 info@naass.co.uk
                 </p>
               </motion.div>
             </motion.div>

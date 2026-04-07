@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 const Footer: React.FC = () => {
@@ -8,33 +8,26 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'ECO 4 Leads', href: '#' },
-      { name: 'Housing Disrepair', href: '#' },
-      { name: 'Life Insurance', href: '#' },
-      { name: 'Google PPC', href: '#' },
-      { name: 'Social Media Ads', href: '#' },
+      { name: 'ECO 4 Leads', href: '/#services' },
+      { name: 'Housing Disrepair', href: '/#services' },
+      { name: 'Life Insurance', href: '/#services' },
+      { name: 'Google PPC', href: '/#services' },
+      { name: 'Social Media Ads', href: '/#services' },
     ],
     company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Our Process', href: '#' },
-      { name: 'Case Studies', href: '#' },
-      { name: 'Testimonials', href: '#testimonials' },
-      { name: 'Contact', href: '#contact' },
+      { name: 'About Us', href: '/#about' },
+      { name: 'Testimonials', href: '/#testimonials' },
+      { name: 'Contact', href: '/#contact' },
+      { name: 'Get Started', href: '/get-started', isRoute: true },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy', isRoute: true },
-      { name: 'Terms of Service', href: '#' },
       { name: 'Cookie Policy', href: '/privacy#cookies', isRoute: true },
       { name: 'GDPR Compliance', href: '/privacy#gdpr', isRoute: true },
     ],
   };
 
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-  ];
+  const socialLinks: Array<{ icon: any; href: string; label: string }> = [];
 
   return (
     <footer className="relative pt-20 pb-10 border-t border-white/10">
@@ -50,13 +43,15 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3 mb-4">
                 {/* Cursor icon similar to favicon */}
                 <div className="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/50">
-                  <svg 
-                    width="20" 
-                    height="20" 
-                    viewBox="0 0 24 24" 
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
                     fill="white"
                     className="transform"
                     style={{ transform: 'rotate(345deg)' }}
+                    role="img"
+                    aria-label="NAASS Leads logo"
                   >
                     <path d="M3 3l18 9-9 2-2 9z" />
                   </svg>
@@ -183,11 +178,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-gray-700" />
-              <span className="text-orange-500/80">info@naass.co.uk</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-gray-700" />
-              <span className="text-orange-500/80">+44 20 1234 5678</span>
+              <a href="mailto:info@naass.co.uk" className="text-orange-500/80 hover:text-orange-500 transition-colors">info@naass.co.uk</a>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-gray-700" />
