@@ -6,6 +6,17 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "NAASS",
+          "url": "https://naass.co.uk",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://naass.co.uk/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }) }} />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="NAASS" />
         <meta name="publisher" content="NAASS" />

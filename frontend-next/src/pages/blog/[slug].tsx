@@ -2,11 +2,13 @@ import SEOHead from '../../components/SEOHead';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import TableOfContents from '../../components/TableOfContents';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, ArrowLeft, User } from 'lucide-react';
+import { Calendar, Clock, User, Twitter, Linkedin, Facebook, Link2 } from 'lucide-react';
 import { blogPosts, BlogPost } from '../../content/blog';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState } from 'react';
 
 interface BlogPostPageProps {
   post: BlogPost;
@@ -26,7 +28,6 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
     .filter(p => p.slug !== post.slug && p.category === post.category)
     .slice(0, 2);
 
-  // If not enough related posts in same category, add from other categories
   if (relatedPosts.length < 2) {
     const moreRelated = blogPosts
       .filter(p => p.slug !== post.slug && !relatedPosts.find(r => r.slug === p.slug))
@@ -36,6 +37,62 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
 
   return { props: { post, relatedPosts } };
 };
+
+function ShareButtons({ title, slug }: { title: string; slug: string }) {
+  const [copied, setCopied] = useState(false);
+  const url = `https://naass.co.uk/blog/${slug}`;
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
+
+  const copyLink = () => {
+    if (typeof navigator !== 'undefined') {
+      navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  return (
+    <div className="flex items-center gap-3">
+      <span className="text-gray-400 text-xs font-medium">Share:</span>
+      <a
+        href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-orange-50 text-gray-500 hover:text-orange-500 transition-colors"
+        aria-label="Share on Twitter"
+      >
+        <Twitter className="w-4 h-4" />
+      </a>
+      <a
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-orange-50 text-gray-500 hover:text-orange-500 transition-colors"
+        aria-label="Share on LinkedIn"
+      >
+        <Linkedin className="w-4 h-4" />
+      </a>
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-orange-50 text-gray-500 hover:text-orange-500 transition-colors"
+        aria-label="Share on Facebook"
+      >
+        <Facebook className="w-4 h-4" />
+      </a>
+      <button
+        onClick={copyLink}
+        className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-orange-50 text-gray-500 hover:text-orange-500 transition-colors"
+        aria-label="Copy link"
+      >
+        <Link2 className="w-4 h-4" />
+      </button>
+      {copied && <span className="text-xs text-orange-500">Copied!</span>}
+    </div>
+  );
+}
 
 export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) {
   const breadcrumbs = [
@@ -78,7 +135,6 @@ export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) 
       <div className="min-h-screen bg-white">
         <Navbar />
         <main className="pt-24 pb-16">
-          {/* Article Header */}
           <article className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <Breadcrumbs items={breadcrumbs} />
@@ -102,7 +158,7 @@ export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) 
                   {post.title}
                 </h1>
 
-                <div className="flex items-center gap-4 mb-10 pb-8 border-b border-gray-100">
+                <div className="flex items-center justify-between gap-4 mb-10 pb-8 border-b border-gray-100 flex-wrap">
                   <div className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
                       <User className="w-5 h-5 text-orange-500" />
@@ -119,8 +175,12 @@ export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) 
                       </p>
                     </div>
                   </div>
+                  <ShareButtons title={post.title} slug={post.slug} />
                 </div>
               </motion.div>
+
+              {/* Table of Contents */}
+              <TableOfContents content={post.content} />
 
               {/* Article Content */}
               <motion.div
@@ -137,6 +197,14 @@ export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) 
                   prose-strong:text-gray-900"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
+
+              {/* Bottom Share Bar */}
+              <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between flex-wrap gap-4">
+                <Link href="/blog" className="text-orange-500 text-sm font-medium hover:underline flex items-center gap-1">
+                  &larr; Back to Blog
+                </Link>
+                <ShareButtons title={post.title} slug={post.slug} />
+              </div>
 
               {/* CTA */}
               <div className="mt-12 p-8 bg-orange-50 border border-orange-100 rounded-2xl text-center">
@@ -183,7 +251,6 @@ export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) 
         <Footer />
       </div>
 
-      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

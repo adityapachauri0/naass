@@ -12,6 +12,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     { loc: '/', changefreq: 'weekly', priority: '1.0' },
     { loc: '/about', changefreq: 'monthly', priority: '0.8' },
     { loc: '/contact', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/services', changefreq: 'monthly', priority: '0.8' },
     { loc: '/services/eco-4', changefreq: 'monthly', priority: '0.8' },
     { loc: '/services/housing-disrepair', changefreq: 'monthly', priority: '0.8' },
     { loc: '/services/life-insurance', changefreq: 'monthly', priority: '0.8' },

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import Head from 'next/head';
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,7 +35,32 @@ const Testimonials: React.FC = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NAASS",
+    "url": "https://naass.co.uk",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": String(testimonials.length),
+      "reviewCount": String(testimonials.length),
+    },
+    "review": testimonials.map(t => ({
+      "@type": "Review",
+      "author": { "@type": "Person", "name": t.name },
+      "reviewRating": { "@type": "Rating", "ratingValue": String(t.rating), "bestRating": "5" },
+      "reviewBody": t.content,
+    })),
+  };
+
   return (
+    <>
+    <Head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+    </Head>
     <section id="testimonials" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
@@ -129,6 +155,7 @@ const Testimonials: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

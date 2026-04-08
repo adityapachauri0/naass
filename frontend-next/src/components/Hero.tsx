@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, TrendingUp, Users, Award, Zap } from 'lucide-react';
+import Link from 'next/link';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
@@ -107,24 +108,26 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.a
-                href="/get-started"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group btn-neon text-orange-500 bg-white/20 border-2 border-black px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center gap-3 inline-block"
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-              </motion.a>
-              
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-orange-500 bg-white/10 px-10 py-5 rounded-full font-bold text-lg border-2 border-black/30 hover:border-black transition-all duration-300 inline-block"
-              >
-                Quick Contact
-              </motion.a>
+              <Link href="/get-started">
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group btn-neon text-orange-500 bg-white/20 border-2 border-black px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center gap-3 cursor-pointer"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </motion.span>
+              </Link>
+
+              <Link href="/contact">
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-orange-500 bg-white/10 px-10 py-5 rounded-full font-bold text-lg border-2 border-black/30 hover:border-black transition-all duration-300 inline-block text-center cursor-pointer"
+                >
+                  Quick Contact
+                </motion.span>
+              </Link>
             </div>
           </motion.div>
 

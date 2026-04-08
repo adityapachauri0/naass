@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Heart, Target, Handshake, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 const About: React.FC = () => {
   const { ref, inView } = useInView({
@@ -60,13 +61,15 @@ const About: React.FC = () => {
               every step of the way.
             </p>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-accent-500 to-gray-600 text-orange-500 px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-gray-500/25 transition-all duration-300"
-            >
-              Learn More About Us
-            </motion.button>
+            <Link href="/about">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition-all duration-300 cursor-pointer"
+              >
+                Learn More About Us
+              </motion.span>
+            </Link>
           </motion.div>
 
           {/* Right Content - Values Grid */}
