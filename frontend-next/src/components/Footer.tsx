@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
       { name: 'Social Media Ads', href: '/services/social-media', isRoute: true },
     ],
     company: [
-      { name: 'About Us', href: '/#about' },
-      { name: 'Testimonials', href: '/#testimonials' },
-      { name: 'Contact', href: '/#contact' },
+      { name: 'About Us', href: '/about', isRoute: true },
+      { name: 'Blog', href: '/blog', isRoute: true },
+      { name: 'Contact', href: '/contact', isRoute: true },
       { name: 'Get Started', href: '/get-started', isRoute: true },
     ],
     legal: [

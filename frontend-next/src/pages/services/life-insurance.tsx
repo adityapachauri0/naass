@@ -2,6 +2,7 @@ import SEOHead from '../../components/SEOHead';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import RelatedServices from '../../components/RelatedServices';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Heart, Star, CheckCircle, Users, TrendingUp, ShieldCheck } from 'lucide-react';
@@ -24,6 +25,15 @@ export default function LifeInsurancePage() {
       <div className="min-h-screen bg-white">
         <Navbar />
         <main className="pt-24 pb-16">
+
+          {/* Breadcrumbs */}
+          <div className="container mx-auto px-4 max-w-4xl">
+            <Breadcrumbs items={[
+              { label: 'Home', href: '/' },
+              { label: 'Services' },
+              { label: 'Life Insurance' },
+            ]} />
+          </div>
 
           {/* Hero */}
           <section className="container mx-auto px-4 mb-20">

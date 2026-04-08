@@ -7,27 +7,22 @@ Allow: /
 Disallow: /dashboard
 Disallow: /login
 Disallow: /api/
-Disallow: /_next/
+Disallow: /thank-you
 
 # Sitemap location
 Sitemap: https://naass.co.uk/sitemap.xml
-
-# Crawl delay (in seconds)
-Crawl-delay: 1
 
 # Google
 User-agent: Googlebot
 Allow: /
 Disallow: /dashboard
 Disallow: /login
-Crawl-delay: 0
 
 # Bing
 User-agent: Bingbot
 Allow: /
 Disallow: /dashboard
 Disallow: /login
-Crawl-delay: 1
 
 # Social Media Crawlers
 User-agent: facebookexternalhit
@@ -43,6 +38,19 @@ User-agent: WhatsApp
 Allow: /
 
 User-agent: Slackbot
+Allow: /
+
+# AI Crawlers - Allow for AI search visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Block bad bots
